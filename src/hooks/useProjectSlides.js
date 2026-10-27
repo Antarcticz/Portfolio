@@ -9,12 +9,13 @@ const useProjectSlides = (project) => {
 
     const slides = useMemo(() => {
         return !project ? [] : [
-            {
+            ...(project.figmaEmbed ? [{
                 id: 'demo',
                 title: 'Demo',
-                content: project.overview,
-                images: project.imageDetails ? [project.imageDetails[0]] : []
-            },
+                content: project.demo,
+                figmaEmbed: project.figmaEmbed
+            }] : []),
+
             {
                 id: 'overview',
                 title: 'Overview',

@@ -34,7 +34,6 @@ const ProjectDetails = () => {
 
     return (
         <main className="details-container slide-mode">
-            {/* The ref is REMOVED from this outer wrapper */}
             <div className="slider-interceptor-area">
                 <header className="details-header">
                     <h1>{project.title}</h1>
@@ -78,26 +77,41 @@ const ProjectDetails = () => {
 
                     <div className="main-content-column">
 
-                        {/* The ref is ADDED here, perfectly targeting your red box area */}
                         <div className="active-slide-content" ref={containerRef}>
+
                             <div className={`slide-visuals ${currentSlideData?.images?.length > 1 ? 'multi-image' : ''}`}>
-                                {currentSlideData?.images && currentSlideData.images.length > 0 ? (
+
+                                {currentSlideData?.figmaEmbed ? (
+                                    <iframe
+                                        className="figma-embed-frame"
+                                        src={currentSlideData.figmaEmbed}
+                                        allowFullScreen
+                                        title={`${project.title} Interactive Prototype`}
+                                    />
+
+                                ) : currentSlideData?.images && currentSlideData.images.length > 0 ? (
                                     currentSlideData.images.map((img, idx) => (
                                         <img key={idx} src={img} alt={`${project.title} ${currentSlideData.title} visual ${idx + 1}`} />
                                     ))
+
                                 ) : (
                                     <div className="placeholder">Visual assets coming soon</div>
                                 )}
                             </div>
+
                             <div className="slide-text">
                                 <h2>{currentSlideData?.title}</h2>
-                                <p>{currentSlideData?.content}</p>
+                                {currentSlideData?.content?.split('\n').map((paragraph, index) => (
+                                    paragraph.trim() !== '' && (
+                                        <p key={index}>{paragraph}</p>
+                                    )
+                                ))}
                             </div>
                         </div>
 
                         <div className="bottom-actions">
-                            <ProjectSourceBtn />
                             <BackToProjectsBtn />
+                            <ProjectSourceBtn />
                         </div>
                     </div>
                 </section>
