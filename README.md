@@ -1,16 +1,24 @@
-# React + Vite
+# Portfolio v2
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A high-performance personal portfolio built with **React + Vite**, focusing on clean architecture, scalable state management, and a refined "soft-minimalist" user experience.
 
-Currently, two official plugins are available:
+## ✨ Technical Highlights
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* **Custom Hooks Architecture:** Logic for themes, scrolling, and data retrieval is decoupled into a centralized "Hooks Map" for maximum maintainability.
+* **System-Aware Theming:** A global `ThemeContext` that detects OS preferences, allows manual overrides, and persists choices via `localStorage`.
+* **Dynamic Data Modeling:** Project details are rendered dynamically from a central data schema, ensuring the UI remains a "pure view."
+* **Advanced UX Patterns:** Includes automated scroll-to-top resets on navigation and dynamic browser tab management.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **Core:** React 18 + Vite
+* **Styling:** SCSS (Modular variables & mixins)
+* **Navigation:** React Router 6
+* **Deployment:** Netlify
 
-## Expanding the ESLint configuration
+## 🚀 Live Demo
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+[Visit the live site](https://maximilian-hedman.netlify.app/)
+
+---
+Built with a focus on clean code and performance by **Maximilian Hedman**.
