@@ -1,0 +1,50 @@
+@use "../../partials/theme" as *;
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 8rem 0 2rem 0;
+    background-color: $theme-surface;
+    gap: 3rem;
+    transition: background-color 0.3s ease;
+
+    @media (min-width: 540px) {
+        gap: 4rem;
+    }
+
+    @media (min-width: 933px) {
+        gap: 5rem;
+    }
+
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 23.75rem), 1fr));
+        justify-content: center;
+        margin: 0 auto;
+        padding: 0 2rem;
+        width: 100%;
+        max-width: 87.5rem;
+        gap: 2rem;
+
+        animation: fadeIn 0.8s ease-out;
+
+        @media (prefers-reduced-motion: reduce) {
+            animation: none;
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
