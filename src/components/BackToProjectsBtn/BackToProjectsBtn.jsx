@@ -19,7 +19,7 @@ const BackToProjectsBtn = () => {
                 aria-label="Back to the projects page"
             >
                 <FontAwesomeIcon icon={['fas', 'arrow-left']} aria-hidden="true" />
-                <span className="bold">Back to Top</span>
+                <span className="bold">Back to Projects</span>
             </button>
         </section>
     )
