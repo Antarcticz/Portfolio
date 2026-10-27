@@ -1,0 +1,71 @@
+@use "../../partials/colors" as *;
+
+.details-container {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 5rem 2rem;
+    background-color: $surface;
+
+    .details-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 50rem; // 800px - easier to read long text
+        gap: 2rem;
+
+        .back-btn {
+            color: $primary;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: $primary-dim;
+            }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: $on-surface;
+            margin-bottom: 0.5rem;
+        }
+
+        .category-tag {
+            color: $on-surface-variant;
+            font-size: 1.125rem;
+        }
+
+        .details-visuals img {
+            width: 100%;
+            border-radius: 1rem;
+            box-shadow: $shadow-standard;
+        }
+
+        .details-description {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            color: $on-surface;
+            line-height: 1.6;
+
+            .external-link {
+                display: inline-block;
+                padding: 1rem 2rem;
+                background-color: $surface-container;
+                color: $primary;
+                border: 1px solid $primary;
+                border-radius: 0.5rem;
+                text-decoration: none;
+                text-align: center;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background-color: $primary-dim;
+                    color: $on-surface;
+                    box-shadow: $glow-primary-small;
+                }
+            }
+        }
+    }
+}

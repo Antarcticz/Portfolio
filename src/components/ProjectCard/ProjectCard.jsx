@@ -1,31 +1,26 @@
 import React from 'react';
-import { projectData } from '../../data/projectData';
+import { Link } from 'react-router-dom';
 import './ProjectCard.scss';
 
-const ProjectCard = () => {
+const ProjectCard = ({ project }) => {
     return (
-        <>
-            {projectData.map((project) => (
-                <a 
-                    className="card-link" 
-                    href={project.link} 
-                    key={project.id} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    aria-label={`View ${project.title} (opens in new tab)`}
-                >
-                    <div className="card">
-                        <div className="card-img">
-                            <img src={project.image} alt="" aria-hidden="true" loading="lazy" />
+        <Link to={`/project/${project.id}`} className='card-link'>
+            <article className="card">
+                <div className="card-img">
+                    {project.image ? (
+                        <img src={project.image} alt="" aria-hidden="true" />
+                    ) : (
+                        <div className="image-placeholder">
+                            <span>Image coming soon</span>
                         </div>
-                        <div className="card-text">
-                            <h4>{project.title}</h4>
-                            <p>{project.description}</p>
-                        </div>
-                    </div>
-                </a>
-            ))}
-        </>
+                    )}
+                </div>
+                <div className="card-text">
+                    <h4>{project.title}</h4>
+                    <p>{project.description}</p>
+                </div>
+            </article>
+        </Link>
     );
 };
 
