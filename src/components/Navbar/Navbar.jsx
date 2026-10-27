@@ -1,26 +1,51 @@
-import React from 'react';
-import { Link, NavLink } from "react-router-dom";
+import React, { useState } from 'react';
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Navbar.scss';
 
 const Navbar = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => setIsOpen(!isOpen);
+    const closeMenu = () => setIsOpen(false);
+
     return (
         <nav aria-label="Main Navigation">
-            <div className="brand-container">
-                <h2>Maximilian Hedman</h2>
+            <div className="nav-top-row">
+                <div className="brand-container">
+                    <h2>Maximilian Hedman</h2>
+                </div>
+
+                <div className='nav-links-mobile'>
+                    <button
+                        className="menu-toggle"
+                        onClick={toggleMenu}
+                        aria-expanded={isOpen}
+                        aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+                    >
+                        <FontAwesomeIcon icon={['fas', isOpen ? 'xmark' : 'bars']} aria-hidden="true" />
+                    </button>
+                </div>
             </div>
+
+            <div className={`mobile-menu-drawer ${isOpen ? 'open' : ''}`}>
+                <div className="drawer-content">
+                    <ul>
+                        <li>
+                            <NavLink to='/' className="navbar-link" onClick={closeMenu}>
+                                Portfolio
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to='/about' className="navbar-link" onClick={closeMenu}>
+                                About
+                            </NavLink>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
             <div className='nav-links-container'>
-                <ul className='nav-links-mobile'>
-                    <li>
-                        <Link
-                            to='/'
-                            className='navbar-link'
-                            aria-label="Home"
-                        >
-                            <FontAwesomeIcon icon={['fas', 'bars']} aria-hidden="true" />
-                        </Link>
-                    </li>
-                </ul>
                 <ul className='nav-links-desktop'>
                     <li>
                         <NavLink
@@ -41,7 +66,7 @@ const Navbar = () => {
                 </ul>
             </div>
         </nav>
-    )
-}
+    );
+};
 
 export default Navbar;
