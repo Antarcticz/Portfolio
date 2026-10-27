@@ -1,0 +1,40 @@
+@use "../../partials/colors" as *;
+
+.back-to-projects {
+    padding: 2rem 0 4rem 0;
+
+    .back-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        border-radius: 1rem;
+        background-color: $surface-container;
+        border: none;
+        cursor: pointer;
+        box-shadow: $shadow-standard;
+        transition: all 0.3s ease;
+
+        .bold {
+            font-weight: 600;
+            color: $on-surface;
+            font-size: 1rem;
+        }
+
+        &:focus-visible {
+            outline: 3px solid $primary-dim;
+            outline-offset: 4px;
+            box-shadow: $glow-primary-small;
+        }
+
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: $glow-primary-small;
+        }
+
+        &:active {
+            transform: translateY(0);
+        }
+    }
+}

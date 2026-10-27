@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { projectData } from '../../data/projectData';
+import BackToProjectsBtn from '../../components/BackToProjectsBtn/BackToProjectsBtn';
 import BackToTopBtn from '../../components/BackToTopBtn/BackToTopBtn';
 import './ProjectDetails.scss';
 
@@ -22,7 +23,7 @@ const ProjectDetails = () => {
     return (
         <main className="details-container">
             <section className="details-content">
-                <Link to="/" className="back-btn">← Back to Projects</Link>
+                <BackToProjectsBtn />
 
                 <header className="details-header">
                     <h1>{project.title}</h1>

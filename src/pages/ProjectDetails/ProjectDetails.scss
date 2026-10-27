@@ -1,12 +1,18 @@
-@use "../../partials/colors" as *;
+@use "../../partials/theme" as *;
 
 .details-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 6rem 2rem;
-    background-color: $surface;
-    color: $on-surface;
+    background-color: $theme-surface;
+    color: $theme-on-surface;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    h1, p {
+        color: $theme-on-surface;
+        transition: color 0.3s ease;
+    }
 
     .details-content {
         max-width: 55rem;
@@ -22,21 +28,25 @@
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 2rem;
         padding: 2rem 0;
-        border-top: 1px solid $outline-variant;
-        border-bottom: 1px solid $outline-variant;
+        border-top: 1px solid $theme-outline;
+        border-bottom: 1px solid $theme-outline;
+        transition: border-color 0.3s ease;
 
         .meta-item {
             h3 {
                 font-size: 0.875rem;
                 text-transform: uppercase;
-                color: $primary;
+                color: $theme-primary;
                 margin-bottom: 0.5rem;
                 letter-spacing: 0.05rem;
+                transition: color 0.3s ease;
             }
 
             p {
                 margin: 0;
                 font-size: 1.1rem;
+                color: $theme-on-surface;
+                transition: color 0.3s ease;
             }
         }
     }
@@ -47,12 +57,13 @@
         gap: 0.5rem;
 
         .tool-tag {
-            background-color: $surface-container-high;
-            color: $secondary;
+            background-color: $theme-surface-high;
+            color: $theme-secondary;
             padding: 0.25rem 0.75rem;
             border-radius: 2rem;
             font-size: 0.85rem;
-            border: 1px solid $outline-variant;
+            border: 1px solid $theme-outline;
+            transition: all 0.3s ease;
         }
     }
 
@@ -62,30 +73,32 @@
         gap: 2.5rem;
 
         h2 {
-            color: $primary;
+            color: $theme-primary;
             font-size: 1.75rem;
+            transition: color 0.3s ease;
         }
 
         p {
             line-height: 1.8;
-            color: $on-surface-variant;
+            color: $theme-on-surface;
             font-size: 1.125rem;
+            transition: color 0.3s ease;
         }
     }
 
     .cta-link {
         display: inline-block;
         padding: 1rem 2.5rem;
-        background-color: $primary-dim;
-        color: white;
+        background-color: $theme-primary-dim;
+        color: #ffffff;
         text-decoration: none;
         border-radius: 0.5rem;
         font-weight: 600;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 
         &:hover {
             transform: translateY(-3px);
-            box-shadow: $glow-primary-small;
+            box-shadow: $theme-glow-primary;
         }
     }
 }
