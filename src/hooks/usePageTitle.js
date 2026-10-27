@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 const usePageTitle = (title) => {
     useEffect(() => {
-        const baseTitle = "Portfolio | Maximilian Hedman";
+        const baseTitle = "Projects | Maximilian Hedman";
         
         document.title = title ? `${title} | Maximilian Hedman` : baseTitle;
 

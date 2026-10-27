@@ -7,7 +7,7 @@ const BackToProjectsBtn = () => {
     const navigate = useNavigate();
 
     const handleBack = () => {
-        navigate('/');
+        navigate('/projects');
     };
 
     return (

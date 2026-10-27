@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import useProject from '../../hooks/useProject';
 import usePageTitle from '../../hooks/usePageTitle';
-import { projectData } from '../../data/projectData';
 import BackToProjectsBtn from '../../components/BackToProjectsBtn/BackToProjectsBtn';
 import BackToTopBtn from '../../components/BackToTopBtn/BackToTopBtn';
 import './ProjectDetails.scss';

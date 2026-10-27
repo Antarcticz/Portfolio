@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import useScroll from './hooks/useScroll';
 import Navbar from './components/Navbar/Navbar';
-import Home from './pages/Projects/Projects';
+import Home from './pages/Home/Home';
 import Projects from './pages/Projects/Projects';
 import ProjectDetails from "./pages/ProjectDetails/ProjectDetails";
 import Footer from './components/Footer/Footer';
