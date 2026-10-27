@@ -3,6 +3,7 @@ import figmaFoodApp from '../assets/figma_Food_app.svg';
 import figmaDevBnB from '../assets/figma_DevBnB.svg';
 import frontendMUI from '../assets/frontend_MUI.svg';
 import frontendVolontarpoolen from '../assets/figma_Volontarpoolen.svg';
+import bob from '../assets/Bob.svg'
 
 export const projectData = [
     {
@@ -21,6 +22,7 @@ export const projectData = [
         tools: null,
         image: figmaVanner,
         link: 'https://www.figma.com/design/Ql9U2CxELqaTBtVrBhOkn4/V%C3%84NNER?node-id=793-5315&t=lXZwuEP3nbLxBmQV-1',
+        workInProgress: bob,
     },
     {
         id: 2,
@@ -38,30 +40,32 @@ export const projectData = [
         tools: null,
         image: figmaFoodApp,
         link: 'https://www.figma.com/design/lPkoTKAivjPEvwXcDFtlTn/Food-app?t=tUORXdu73FpuWzSl-1',
+        workInProgress: Bob,
     },
  
     {
         id: 3,
         title: 'DevBnB Website',
-        subtitle: null,
+        subtitle: 'test',
         tag: 'Frontend + Backend',
-        overview: null,
-        problem: null,
-        research: null,
-        design: null,
-        outcome: null,
-        reflection: null,
-        role: null,
-        duration: null,
-        tools: null,
+        overview: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
+        problem: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
+        research: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
+        design: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
+        outcome: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
+        reflection: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
+        role: 'Code Master',
+        duration: '2 weeks',
+        tools: [`React Native`, `Typescript`, `Firebase`],
         image: figmaDevBnB,
         link: 'https://www.figma.com/design/sQMMYLChY0uwOk49JafqaZ/Frontend-Project-DevBnB?node-id=0-1&t=tUORXdu73FpuWzSl-1',
+        workInProgress: Bob,
     },
     {
         id: 4,
         title: `Mission Usage Impossible`,
         subtitle: `A deliberately frustrating app built with React Native, Expo, and Firebase Authentication.`,
-        tag: `React Native`,
+        tag: 'React Native',
         overview: `Mission: Usage Impossible was a collaborative school project where we explored the boundaries of UX by intentionally breaking every rule. Working alongside my classmate Desirée, who spearheaded the UI design and retro-inspired mini-games, I was responsible for the technical infrastructure, backend logic, and Firebase Authentication. Our goal was to create a fully functional app that is simultaneously a nightmare to use. The project features a deliberately confusing onboarding flow, a landing page, user profiles, and a dedicated "irritation page" filled with unpredictable interactive elements.`,
         problem: null,
         research: null,
@@ -72,7 +76,8 @@ export const projectData = [
         duration: `2 weeks`,
         tools: [`React Native`, `Expo`, `Firebase`],
         image: frontendMUI,
-        link: null,
+        link: 'null',
+        workInProgress: Bob,
     },
     {
         id: 5,
@@ -90,6 +95,7 @@ export const projectData = [
         tools: null,
         image: frontendVolontarpoolen,
         link: null,
+        workInProgress: Bob,
     },
     {
         id: 6,
@@ -107,6 +113,7 @@ export const projectData = [
         tools: null,
         image: null,
         link: null,
+        workInProgress: Bob,
     },
     {
         id: 7,
@@ -124,6 +131,7 @@ export const projectData = [
         tools: null,
         image: null,
         link: null,
+        workInProgress: Bob,
     },
     {
         id: 8,
@@ -141,6 +149,7 @@ export const projectData = [
         tools: null,
         image: null,
         link: null,
+        workInProgress: Bob,
     },
     {
         id: 9,
@@ -158,6 +167,7 @@ export const projectData = [
         tools: null,
         image: null,
         link: null,
+        workInProgress: Bob,
     },
     {
         id: 10,
@@ -175,5 +185,6 @@ export const projectData = [
         tools: null,
         image: null,
         link: null,
+        workInProgress: Bob,
     },
 ];

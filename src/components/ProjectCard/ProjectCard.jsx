@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './ProjectCard.scss';
+import Bob from '../../assets/Bob.svg';
 
 const ProjectCard = ({ project }) => {
     return (
@@ -15,9 +16,14 @@ const ProjectCard = ({ project }) => {
                         </div>
                     )}
                 </div>
-                <div className="card-text">
-                    <h4>{project.title}</h4>
-                    <p className="card-tag">{project.tag}</p>
+                <div className='card-text-container'>
+                    <div className="card-text">
+                        <h4>{project.title}</h4>
+                        <p className="card-tag">{project.tag}</p>
+                    </div>
+                    <div className='bob'>
+                        <img src={project.workInProgress} alt="Work in progress" />
+                    </div>
                 </div>
             </article>
         </Link>
