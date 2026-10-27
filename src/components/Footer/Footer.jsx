@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Footer.scss';
 
 const Footer = () => {
+    const currentYear = new Date().getFullYear();
+    
     return (
         <footer>
             <ul className="footer-socials" aria-label="Social media links">
@@ -45,7 +47,7 @@ const Footer = () => {
                     </a>
                 </li>
             </ul>
-            <p className="copyright">Maximilian Hedman &copy; 2026</p>
+            <p className="copyright">Maximilian Hedman. All rights reserved. &copy; {currentYear}</p>
         </footer>
     )
 }
