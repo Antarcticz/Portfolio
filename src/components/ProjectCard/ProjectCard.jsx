@@ -9,8 +9,8 @@ const ProjectCard = ({ project }) => {
         <Link to={`/project/${urlTitle}`} className='card-link'>
             <article className="card">
                 <div className="card-img">
-                    {project.image ? (
-                        <img src={project.image} alt="" aria-hidden="true" />
+                    {project.imageShowcase ? (
+                        <img src={project.imageShowcase} alt="" aria-hidden="true" />
                     ) : (
                         <div className="image-placeholder">
                             <span>Image coming soon</span>

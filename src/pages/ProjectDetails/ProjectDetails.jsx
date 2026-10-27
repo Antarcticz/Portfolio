@@ -58,8 +58,10 @@ const ProjectDetails = () => {
                 </div>
 
                 <div className="details-visuals">
-                    {project.image ? (
-                        <img src={project.image} alt={project.title} />
+                    {project.imageDetails && project.imageDetails.length > 0 ? (
+                        project.imageDetails.map((imagePath, index) => (
+                            <img key={index} src={imagePath} alt={`${project.title} detail ${index + 1}`} />
+                        ))
                     ) : (
                         <div className="details-placeholder">
                             <p>Visual assets coming soon</p>

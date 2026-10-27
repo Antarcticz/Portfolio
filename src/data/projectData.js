@@ -2,8 +2,20 @@ import figma_Vanner_Showcase from '../assets/images/figma/Vanner/Vanner.svg';
 import figma_FoodApp_Showcase from '../assets/images/figma/Food_App/Food_app.svg';
 import figma_DevBnB_Showcase from '../assets/images/figma/DevBnB/DevBnB.svg';
 import figma_Volontarpoolen_Showcase from '../assets/images/figma/Volontarpoolen/Volontarpoolen.svg';
+
 import figma_NEU_Showcase from '../assets/images/figma/NEU/NEU_Showcase.svg';
-import frontend_MUI_Showcase from '../assets/images/frontend/MUI/MUI_Showcase.svg';
+import figma_NEU_Start from '../assets/images/figma/NEU/NEU_Start.svg';
+import figma_NEU_Profile from '../assets/images/figma/NEU/NEU_Profile.svg';
+import figma_NEU_AI from '../assets/images/figma/NEU/NEU_AI.svg';
+import figma_NEU_Mood_Track from '../assets/images/figma/NEU/NEU_Mood_Track.svg';
+
+import frontend_MUI_Showcase from '../assets/images/frontend/MUI/MUI_Showcase.svg'
+import frontend_MUI_Login from '../assets/images/frontend/MUI/MUI_Login.svg'
+import frontend_MUI_Register from '../assets/images/frontend/MUI/MUI_Register.svg'
+import frontend_MUI_Flappy from '../assets/images/frontend/MUI/MUI_Flappy.svg'
+import frontend_MUI_Snake from '../assets/images/frontend/MUI/MUI_Snake.svg'
+import frontend_MUI_XP from '../assets/images/frontend/MUI/MUI_XP.svg'
+
 import bob from '../assets/images/misc/bob.svg'
 
 export const projectData = [
@@ -17,7 +29,7 @@ export const projectData = [
         duration: `2 weeks`,
         tools: [`React Native`, `Expo`, `Firebase`],
         imageShowcase: frontend_MUI_Showcase,
-        imageDetails: null,
+        imageDetails: [frontend_MUI_Login, frontend_MUI_Register, frontend_MUI_Flappy, frontend_MUI_Snake, frontend_MUI_XP],
         link: 'null',
         overview: `Mission: Usage Impossible was a collaborative school project where we explored the boundaries of UX by intentionally breaking every rule. Working alongside my classmate Desirée, who spearheaded the UI design and retro-inspired mini-games, I was responsible for the technical infrastructure, backend logic, and Firebase Authentication. Our goal was to create a fully functional app that is simultaneously a nightmare to use. The project features a deliberately confusing onboarding flow, a landing page, user profiles, and a dedicated "irritation page" filled with unpredictable interactive elements.`,
         problem: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
@@ -47,7 +59,7 @@ export const projectData = [
         reflection: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
         workInProgress: bob,
     },
-     {
+    {
         id: 3,
         isVisible: true,
         title: 'SOLENIA',
@@ -97,7 +109,7 @@ export const projectData = [
         duration: null,
         tools: null,
         imageShowcase: figma_NEU_Showcase,
-        imageDetails: null,
+        imageDetails: [figma_NEU_Start, figma_NEU_AI, figma_NEU_Profile, figma_NEU_Mood_Track],
         link: null,
         overview: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
         problem: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',

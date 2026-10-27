@@ -52,8 +52,22 @@
     }
 
     .details-visuals {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+
         img {
-            width: 100%;
+            width: 20%;
+        }
+
+        .details-placeholder {
+            display: flex;
+            margin: auto;
+
+            p {
+                font-size: 4rem;
+            }
         }
     }
 
