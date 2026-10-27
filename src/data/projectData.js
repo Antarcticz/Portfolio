@@ -1,6 +1,8 @@
 import figmaVanner from '../assets/figma_Vanner.svg';
 import figmaFoodApp from '../assets/figma_Food_app.svg';
 import figmaDevBnB from '../assets/figma_DevBnB.svg';
+import frontendMUI from '../assets/frontend_MUI.svg';
+import frontendVolontarpoolen from '../assets/figma_Volontarpoolen.svg';
 
 export const projectData = [
     {
@@ -69,7 +71,7 @@ export const projectData = [
         role: 'Fullstack Developer (Backend Focus)',
         duration: `2 weeks`,
         tools: [`React Native`, `Expo`, `Firebase`],
-        image: null,
+        image: frontendMUI,
         link: null,
     },
     {
@@ -86,7 +88,7 @@ export const projectData = [
         role: null,
         duration: null,
         tools: null,
-        image: null,
+        image: frontendVolontarpoolen,
         link: null,
     },
     {
