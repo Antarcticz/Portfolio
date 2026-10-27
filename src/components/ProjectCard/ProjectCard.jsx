@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './ProjectCard.scss';
-import Bob from '../../assets/Bob.svg';
 
 const ProjectCard = ({ project }) => {
     return (
@@ -22,7 +21,7 @@ const ProjectCard = ({ project }) => {
                         <p className="card-tag">{project.tag}</p>
                     </div>
                     <div className='bob'>
-                        <img src={project.workInProgress} alt="Work in progress" />
+                        <img src={project.workInProgress} alt="Work in progress" title="Work in progress" />
                     </div>
                 </div>
             </article>

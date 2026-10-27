@@ -67,12 +67,15 @@
         .card-text-container {
             display: flex;
             flex-direction: row;
-
-            border: 1px solid yellow;
+            justify-content: space-between;
+            padding: 1.5rem;
 
             .bob {
+                width: 3rem;
 
-                border: 1px solid orange;
+                img {
+                    width: 100%;
+                }
             }
 
             .card-text {
@@ -81,9 +84,8 @@
                 justify-content: center;
                 align-items: flex-start;
                 gap: 0.25rem;
-                padding: 1.5rem;
+                
                 text-align: center;
-                border: 1px solid red;
     
                 h4 {
                     margin: 0;
