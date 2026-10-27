@@ -1,11 +1,10 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import useScroll from '../../hooks/useScroll';
 import './BackToTopBtn.scss';
 
 const BackToTopBtn = () => {
-    const scrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
+    const { scrollToTop } = useScroll(false);
 
     return (
         <section className="back-to-top">
