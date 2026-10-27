@@ -6,7 +6,7 @@ import BackToTopBtn from '../../components/BackToTopBtn/BackToTopBtn';
 const Home = () => {
     return (
         <main className='home-container'>
-            <section className='card-container'>
+            <section className='card-container' aria-label="Projects Portfolio">
                 <ProjectCard />
             </section>
             <BackToTopBtn />
@@ -14,4 +14,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default Home;

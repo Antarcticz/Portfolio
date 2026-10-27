@@ -19,15 +19,15 @@ nav {
         font-family: "Dancing Script", cursive;
         font-weight: 700;
         color: $on-surface;
-        font-size: 26px;
+        font-size: 1.625rem;
         margin: 0;
 
         @media (min-width: 540px) {
-            font-size: 36px;
+            font-size: 2.25rem;
         }
 
         @media (min-width: 933px) {
-            font-size: 60px;
+            font-size: 3.75rem;
         }
     }
 }
@@ -59,15 +59,22 @@ nav {
 .navbar-link {
     text-decoration: none;
     color: $on-surface;
-    font-size: 20px;
-    transition: color 0.3s ease;
+    font-size: 1.25rem; // 20px
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+
+    &:focus-visible {
+        outline: 2px solid $primary-dim;
+        outline-offset: 4px;
+        border-radius: 4px;
+    }
 
     &:hover {
         color: $primary;
     }
 
-    &.active,
-    &#active {
-        color: $primary;
+    &.active {
+        color: $primary-dim;
+        border-bottom: 2px solid $primary-dim;
     }
 }

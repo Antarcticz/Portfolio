@@ -1,19 +1,19 @@
 // Brand Colors
 $primary: #a3a6ff;
-$primary-dim: #6063ee;
+$primary-dim: #7376ff;
+$primary-fixed: #9396ff;
 $secondary: #a68dfa;
 $tertiary: #ff9dd1;
-$active-red: #d64f4f;
-$neon-green: #39FF14;
+$tertiary-dim: #eb7bba;
 
 // Surface & Neutral Colors
-$surface: #0e0e0e;
+$surface: #0e0e0e; 
 $surface-container: #1a1a1a;
-$surface-variant: #262626;
 $on-surface: #ffffff;
 $on-surface-variant: #adaaaa;
 
-// Transparency & Glows
-$outline-variant: rgba(72, 72, 71, 0.2);
-$glow-indigo: rgba(163, 166, 255, 0.08);
-$glow-primary-subtle: rgba(163, 166, 255, 0.3);
+// Shadows & Effects
+$shadow-standard: 0 4px 10px rgba(0, 0, 0, 0.5);
+$shadow-depth: 0 10px 20px rgba(0, 0, 0, 0.4);
+$glow-primary: 0 0 12px $primary-dim;
+$glow-primary-small: 0 0 5px 2px $primary-dim;

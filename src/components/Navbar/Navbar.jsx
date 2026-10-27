@@ -5,15 +5,19 @@ import './Navbar.scss';
 
 const Navbar = () => {
     return (
-        <nav>
+        <nav aria-label="Main Navigation">
             <div className="brand-container">
                 <h2>Maximilian Hedman</h2>
             </div>
             <div className='nav-links-container'>
                 <ul className='nav-links-mobile'>
                     <li>
-                        <Link to='/' className='navbar-link'>
-                            <FontAwesomeIcon icon={['fas', 'bars']} />
+                        <Link
+                            to='/'
+                            className='navbar-link'
+                            aria-label="Home"
+                        >
+                            <FontAwesomeIcon icon={['fas', 'bars']} aria-hidden="true" />
                         </Link>
                     </li>
                 </ul>
@@ -26,7 +30,6 @@ const Navbar = () => {
                             Portfolio
                         </NavLink>
                     </li>
-
                     <li>
                         <NavLink
                             to='/about'
@@ -41,4 +44,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+export default Navbar;

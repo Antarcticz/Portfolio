@@ -6,15 +6,40 @@ footer {
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    padding: 1rem;
-    gap: 1rem;
-    background: hsl(0, 0%, 9%);
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+    background-color: $surface-container;
 
-    a[href*="linkedin"] svg:hover,
-    a[href*="github"] svg:hover,
-    a[href*="facebook"] svg:hover {
-        path {
-            fill: $primary;
+    .footer-socials {
+        display: flex;
+        gap: 2rem;
+
+        a {
+            font-size: 1.5rem;
+            color: $on-surface-variant;
+            transition: all 0.3s ease;
+            display: flex;
+            padding: 0.5rem;
+            border-radius: 50%;
+
+            &:focus-visible {
+                outline: 2px solid $primary-dim;
+                outline-offset: 4px;
+                color: $primary-dim;
+                box-shadow: $glow-primary-small;
+            }
+
+            &:hover {
+                color: $primary-dim;
+                transform: translateY(-3px);
+                filter: drop-shadow(0 0 5px $primary-dim);
+            }
         }
+    }
+
+    .copyright {
+        font-size: 0.875rem;
+        color: $on-surface-variant;
+        opacity: 0.8;
     }
 }

@@ -7,20 +7,34 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: .5rem;
-        padding: 1rem;
+        gap: 0.5rem;
+        padding: 0.75rem 1.5rem;
         border-radius: 1rem;
-        background-color: #303030;
-        box-shadow: 0 0 5px 2px rgba(0, 0, 0, 10);
+        background-color: $surface-container;
+        border: none;
+        cursor: pointer;
+        box-shadow: $shadow-standard;
+        transition: all 0.3s ease;
 
         .bold {
             font-weight: 600;
+            color: $on-surface;
+            font-size: 1rem;
+        }
+
+        &:focus-visible {
+            outline: 3px solid $primary-dim;
+            outline-offset: 4px;
+            box-shadow: $glow-primary-small;
         }
 
         &:hover {
-            box-shadow: 0 0 5px 2px $primary-dim;
+            transform: translateY(-3px);
+            box-shadow: $glow-primary-small;
+        }
+
+        &:active {
+            transform: translateY(0);
         }
     }
 }
-
-
