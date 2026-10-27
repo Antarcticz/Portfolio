@@ -19,14 +19,13 @@
     }
 
     .card-container {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 23.75rem), 1fr));
         justify-content: center;
-        align-items: center;
-        text-align: center;
+        margin: 0 auto;
         padding: 0 2rem;
         width: 100%;
-        max-width: 1400px;
+        max-width: 87.5rem;
         gap: 2rem;
 
         animation: fadeIn 0.8s ease-out;
