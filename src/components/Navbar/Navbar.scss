@@ -1,10 +1,11 @@
-@use "../../partials/colors" as *;
+@use "../../partials/theme" as *;
 
 nav {
     display: flex;
     flex-direction: column;
     padding: 1rem 2rem;
-    background-color: $surface;
+    background-color: $theme-surface;
+    transition: background-color 0.3s ease;
 
     @media (min-width: 933px) {
         gap: 1.5rem;
@@ -17,6 +18,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    position: relative;
 
     @media (min-width: 933px) {
         justify-content: center;
@@ -27,9 +29,10 @@ nav {
     h2 {
         font-family: "Dancing Script", cursive;
         font-weight: 700;
-        color: $on-surface;
+        color: $theme-on-surface;
         font-size: 1.625rem;
         margin: 0;
+        transition: color 0.3s ease;
 
         @media (min-width: 540px) {
             font-size: 2.25rem;
@@ -37,6 +40,51 @@ nav {
 
         @media (min-width: 933px) {
             font-size: 3.75rem;
+        }
+    }
+}
+
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    @media (min-width: 933px) {
+        position: absolute;
+        right: 0;
+    }
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+
+    svg {
+        font-size: 1.5rem;
+
+        path {
+            fill: $theme-on-surface;
+            transition: fill 0.3s ease;
+        }
+    }
+
+    &:focus-visible {
+        outline: 2px solid $theme-primary-dim;
+        outline-offset: 4px;
+        border-radius: 4px;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+
+        svg path {
+            fill: $theme-primary;
         }
     }
 }
@@ -49,19 +97,32 @@ nav {
     .menu-toggle {
         background: none;
         border: none;
-        color: $on-surface;
-        font-size: 1.75rem;
         cursor: pointer;
         padding: 0.5rem;
-        transition: color 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease;
+
+        // Path override logic for the hamburger menu
+        svg {
+            font-size: 1.75rem;
+
+            path {
+                fill: $theme-on-surface;
+                transition: fill 0.3s ease;
+            }
+        }
 
         &:focus-visible {
-            outline: 2px solid $primary-dim;
+            outline: 2px solid $theme-primary-dim;
             outline-offset: 4px;
         }
 
         &:hover {
-            color: $primary;
+            svg path {
+                fill: $theme-primary;
+            }
         }
     }
 }
@@ -113,22 +174,23 @@ nav {
 
 .navbar-link {
     text-decoration: none;
-    color: $on-surface;
+    color: $theme-on-surface;
     font-size: 1.25rem;
     transition: all 0.3s ease;
     border-bottom: 2px solid transparent;
 
     &:focus-visible {
-        outline: 2px solid $primary-dim;
+        outline: 2px solid $theme-primary-dim;
         outline-offset: 4px;
         border-radius: 4px;
     }
 
     &:hover {
-        color: $primary;
+        color: $theme-primary;
     }
 
     &.active {
-        color: $primary-dim;
+        color: $theme-primary-dim;
+        border-bottom: 2px solid $theme-primary-dim;
     }
 }

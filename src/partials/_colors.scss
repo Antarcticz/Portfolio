@@ -1,4 +1,29 @@
-// Brand Colors
+/* --- LIGHT THEME VARIABLES --- */
+$lt-primary: #5458ce; 
+$lt-primary-dim: #4346a6;
+$lt-primary-fixed: #7376ff;
+$lt-secondary: #6549bf;
+$lt-tertiary: #9c306d;
+$lt-tertiary-dim: #7a2253;
+
+$lt-surface: #fcfcfc;
+$lt-surface-container-lowest: #ffffff;
+$lt-surface-container-low: #f7f2fa;
+$lt-surface-container: #f3edf7;
+$lt-surface-container-high: #ece6f0;
+$lt-surface-container-highest: #e6e0e9;
+$lt-surface-variant: #e7e0ec;
+$lt-surface-bright: #fffbff;
+
+$lt-on-surface: #1c1b1f;
+$lt-on-surface-variant: #49454f;
+
+$lt-outline-variant: rgba(0, 0, 0, 0.12);
+$lt-glow-primary: 0 0 12px 0px rgba(84, 88, 206, 0.2);
+$lt-shadow-standard: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+
+/* --- DARK THEME VARIABLES (Default) --- */
 $primary: #a3a6ff;
 $primary-dim: #7376ff;
 $primary-fixed: #9396ff;
@@ -6,7 +31,6 @@ $secondary: #a68dfa;
 $tertiary: #ff9dd1;
 $tertiary-dim: #eb7bba;
 
-// Surface & Neutral Colors (The Full Tier)
 $surface: #0e0e0e;
 $surface-container-lowest: #000000;
 $surface-container-low: #131313;
@@ -16,15 +40,12 @@ $surface-container-highest: #262626;
 $surface-variant: #262626;
 $surface-bright: #2c2c2c;
 
-// On-Surface (Text/Icons)
 $on-surface: #ffffff;
 $on-surface-variant: #adaaaa;
 
-// UI Details
 $outline-variant: rgba(72, 72, 71, 0.2);
 $glow-indigo: rgba(163, 166, 255, 0.08);
 
-// Shadows
 $shadow-standard: 0 4px 10px rgba(0, 0, 0, 0.5);
 $shadow-depth: 0 10px 20px rgba(0, 0, 0, 0.4);
 $glow-primary-small: 0 0 10px 0px $primary-dim;

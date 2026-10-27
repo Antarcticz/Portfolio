@@ -1,4 +1,4 @@
-@use "../../partials/colors" as *;
+@use "../../partials/theme" as *;
 
 .home-container {
     display: flex;
@@ -7,8 +7,10 @@
     align-items: center;
     min-height: 100vh;
     padding: 5rem 0 2rem 0;
-    background-color: $surface;
+    // Updated to the theme alias
+    background-color: $theme-surface;
     gap: 3rem;
+    transition: background-color 0.3s ease; // Added for smooth theme transition
 
     @media (min-width: 540px) {
         gap: 4rem;

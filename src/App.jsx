@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
@@ -8,6 +9,7 @@ import ProjectDetails from "./pages/ProjectDetails/ProjectDetails";
 
 const App = () => {
     return (
+        <ThemeProvider>
         <Router>
             <Navbar />
 
@@ -19,6 +21,7 @@ const App = () => {
 
             <Footer />
         </Router>
+        </ThemeProvider>
     );
 };
 
