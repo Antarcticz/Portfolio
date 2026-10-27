@@ -1,10 +1,14 @@
 import React from 'react';
+import usePageTitle from '../../hooks/usePageTitle';
 import SocialLinks from '../../components/SocialLinks/SocialLinks';
 import BackToTopBtn from '../../components/BackToTopBtn/BackToTopBtn';
 import profile from '../../assets/profile.svg';
 import './About.scss';
 
 const About = () => {
+
+    usePageTitle("About");
+
     return (
         <main className='about-container'>
             <section className="about-hero" aria-label="Professional Introduction">
