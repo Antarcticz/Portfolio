@@ -5,14 +5,15 @@ import './ProjectDetails.scss';
 
 const ProjectDetails = () => {
     const { id } = useParams();
-
     const project = projectData.find(p => p.id === Number(id));
 
     if (!project) {
         return (
             <main className="details-container">
-                <h2>Project not found</h2>
-                <Link to="/">Back to Home</Link>
+                <div className="not-found">
+                    <h2>Project not found</h2>
+                    <Link to="/" className="back-btn">Back to Portfolio</Link>
+                </div>
             </main>
         );
     }
@@ -20,38 +21,78 @@ const ProjectDetails = () => {
     return (
         <main className="details-container">
             <section className="details-content">
-                <Link to="/" className="back-btn" aria-label="Go back to portfolio">
-                    ← Back to Projects
-                </Link>
+                <Link to="/" className="back-btn">← Back to Projects</Link>
 
                 <header className="details-header">
                     <h1>{project.title}</h1>
-                    <p className="category-tag">{project.description}</p>
+                    {project.subtitle && <p className="subtitle">{project.subtitle}</p>}
                 </header>
 
-                <div className="details-visuals">
-                    {project.image ? (
-                        <img src={project.image} alt={`Screenshot of ${project.title}`} />
-                    ) : (
-                        <div className="details-placeholder">
-                            <p>Full project preview coming soon</p>
+                <div className="metadata-grid">
+                    {project.role && (
+                        <div className="meta-item">
+                            <h3>Role</h3>
+                            <p>{project.role}</p>
+                        </div>
+                    )}
+                    {project.duration && (
+                        <div className="meta-item">
+                            <h3>Duration</h3>
+                            <p>{project.duration}</p>
+                        </div>
+                    )}
+                    {project.tools && (
+                        <div className="meta-item">
+                            <h3>Tools</h3>
+                            <div className="tools-list">
+                                {project.tools.map((tool, index) => (
+                                    <span key={index} className="tool-tag">{tool}</span>
+                                ))}
+                            </div>
                         </div>
                     )}
                 </div>
 
-                <div className="details-description">
-                    <h3>About this project</h3>
-                    //TODO Add longerDescription field in projectData
-                    <p>
-                        
-                    </p>
-
-                    {project.link && (
-                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="external-link">
-                            View on Figma / Live Demo
-                        </a>
+                <div className="details-visuals">
+                    {project.image ? (
+                        <img src={project.image} alt={project.title} />
+                    ) : (
+                        <div className="details-placeholder">
+                            <p>Visual assets coming soon</p>
+                        </div>
                     )}
                 </div>
+
+                <article className="details-body">
+                    {project.overview && (
+                        <section>
+                            <h2>Overview</h2>
+                            <p>{project.overview}</p>
+                        </section>
+                    )}
+
+                    {project.design && (
+                        <section>
+                            <h2>Process & Design</h2>
+                            <p>{project.design}</p>
+                        </section>
+                    )}
+
+                    {project.reflection && (
+                        <section>
+                            <h2>Reflection</h2>
+                            <p>{project.reflection}</p>
+                        </section>
+                    )}
+                </article>
+
+                {project.link && (
+                    <footer className="details-footer">
+                        <a href={project.link} target="_blank" rel="noreferrer" className="cta-link">
+                            View Project Source / Prototype
+                        </a>
+                    </footer>
+                )}
             </section>
         </main>
     );
