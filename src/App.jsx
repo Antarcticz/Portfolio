@@ -10,17 +10,17 @@ import ProjectDetails from "./pages/ProjectDetails/ProjectDetails";
 const App = () => {
     return (
         <ThemeProvider>
-        <Router>
-            <Navbar />
+            <Router>
+                <Navbar />
 
-            <Routes>
-                <Route path='/' element={<Home />} />
-                <Route path='/about' element={<About />} />
-                <Route path='/project/:id' element={<ProjectDetails />} />
-            </Routes>
+                <Routes>
+                    <Route path='/' element={<Home />} />
+                    <Route path='/about' element={<About />} />
+                    <Route path='/project/:id' element={<ProjectDetails />} />
+                </Routes>
 
-            <Footer />
-        </Router>
+                <Footer />
+            </Router>
         </ThemeProvider>
     );
 };

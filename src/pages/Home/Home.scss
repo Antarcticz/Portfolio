@@ -7,10 +7,9 @@
     align-items: center;
     min-height: 100vh;
     padding: 5rem 0 2rem 0;
-    // Updated to the theme alias
     background-color: $theme-surface;
     gap: 3rem;
-    transition: background-color 0.3s ease; // Added for smooth theme transition
+    transition: background-color 0.3s ease;
 
     @media (min-width: 540px) {
         gap: 4rem;

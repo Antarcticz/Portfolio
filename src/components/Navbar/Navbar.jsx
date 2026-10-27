@@ -19,7 +19,6 @@ const Navbar = () => {
                 </div>
 
                 <div className="nav-controls">
-                    {/* Theme Toggler */}
                     <button
                         className="theme-toggle"
                         onClick={toggleTheme}
@@ -32,7 +31,6 @@ const Navbar = () => {
                         />
                     </button>
 
-                    {/* Mobile Menu Toggle */}
                     <div className='nav-links-mobile'>
                         <button
                             className="menu-toggle"
@@ -46,7 +44,6 @@ const Navbar = () => {
                 </div>
             </div>
 
-            {/* Mobile Drawer */}
             <div className={`mobile-menu-drawer ${isOpen ? 'open' : ''}`}>
                 <div className="drawer-content">
                     <ul>
@@ -64,7 +61,6 @@ const Navbar = () => {
                 </div>
             </div>
 
-            {/* Desktop Navigation */}
             <div className='nav-links-container'>
                 <ul className='nav-links-desktop'>
                     <li>

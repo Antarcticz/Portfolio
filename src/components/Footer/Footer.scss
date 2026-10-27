@@ -1,4 +1,4 @@
-@use "../../partials/colors" as *;
+@use "../../partials/theme" as *;
 
 footer {
     display: flex;
@@ -8,7 +8,8 @@ footer {
     text-align: center;
     padding: 2rem 1rem;
     gap: 1.5rem;
-    background-color: $surface-container;
+    background-color: $theme-surface-container;
+    transition: background-color 0.3s ease;
 
     .footer-socials {
         display: flex;
@@ -16,30 +17,44 @@ footer {
 
         a {
             font-size: 1.5rem;
-            color: $on-surface-variant;
+            color: $theme-on-surface-variant;
             transition: all 0.3s ease;
             display: flex;
             padding: 0.5rem;
             border-radius: 50%;
 
+            svg path {
+                fill: $theme-on-surface-variant;
+                transition: fill 0.3s ease;
+            }
+
             &:focus-visible {
-                outline: 2px solid $primary-dim;
+                outline: 2px solid $theme-primary-dim;
                 outline-offset: 4px;
-                color: $primary-dim;
-                box-shadow: $glow-primary-small;
+                color: $theme-primary-dim;
+                box-shadow: $theme-glow-primary;
+
+                svg path {
+                    fill: $theme-primary-dim;
+                }
             }
 
             &:hover {
-                color: $primary-dim;
+                color: $theme-primary-dim;
                 transform: translateY(-3px);
-                filter: drop-shadow(0 0 5px $primary-dim);
+                filter: drop-shadow(0 0 5px $theme-primary-dim);
+
+                svg path {
+                    fill: $theme-primary-dim;
+                }
             }
         }
     }
 
     .copyright {
         font-size: 0.875rem;
-        color: $on-surface-variant;
+        color: $theme-on-surface-variant;
         opacity: 0.8;
+        transition: color 0.3s ease;
     }
 }
