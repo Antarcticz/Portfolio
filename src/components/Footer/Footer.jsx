@@ -4,9 +4,12 @@ import './Footer.scss';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
-    
+
     return (
         <footer>
+            <div className='name' aria-label='Name'>
+                <p>Maximilian Hedman. </p>
+            </div>
             <ul className="footer-socials" aria-label="Social media links">
                 <li>
                     <a
@@ -47,7 +50,9 @@ const Footer = () => {
                     </a>
                 </li>
             </ul>
-            <p className="copyright">Maximilian Hedman. All rights reserved. &copy; {currentYear}</p>
+            <div className='copyright' aria-label='Copyright'>
+                <p> All rights reserved. &copy; {currentYear}</p>
+            </div>
         </footer>
     )
 }

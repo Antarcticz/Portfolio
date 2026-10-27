@@ -15,6 +15,7 @@ import frontend_MUI_Register from '../assets/images/frontend/MUI/MUI_Register.sv
 import frontend_MUI_Flappy from '../assets/images/frontend/MUI/MUI_Flappy.svg'
 import frontend_MUI_Snake from '../assets/images/frontend/MUI/MUI_Snake.svg'
 import frontend_MUI_XP from '../assets/images/frontend/MUI/MUI_XP.svg'
+import frontend_MUI_Pages from '../assets/images/frontend/MUI/MUI_Pages.svg'
 
 import bob from '../assets/images/misc/bob.svg'
 
@@ -29,7 +30,7 @@ export const projectData = [
         duration: `2 weeks`,
         tools: [`React Native`, `Expo`, `Firebase`],
         imageShowcase: frontend_MUI_Showcase,
-        imageDetails: [frontend_MUI_Login, frontend_MUI_Register, frontend_MUI_Flappy, frontend_MUI_Snake, frontend_MUI_XP],
+        imageDetails: [frontend_MUI_Login, frontend_MUI_Register, frontend_MUI_Flappy, frontend_MUI_Snake, frontend_MUI_XP, frontend_MUI_Pages],
         link: 'https://mission-usage-impossible.netlify.app/',
         overview: `Mission: Usage Impossible was a collaborative school project where we explored the boundaries of UX by intentionally breaking every rule. Working alongside my classmate Desirée, who spearheaded the UI design and retro-inspired mini-games, I was responsible for the technical infrastructure, backend logic, and Firebase Authentication. Our goal was to create a fully functional app that is simultaneously a nightmare to use. The project features a deliberately confusing onboarding flow, a landing page, user profiles, and a dedicated "irritation page" filled with unpredictable interactive elements.`,
         problem: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',

@@ -1,9 +1,9 @@
-@use "../../partials/colors" as *;
+@use "../../../partials/colors" as *;
 
-.back-to-projects {
+.back-to-top {
     padding: 2rem 0 4rem 0;
 
-    .back-btn {
+    .scroll-btn {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -15,6 +15,10 @@
         cursor: pointer;
         box-shadow: $shadow-standard;
         transition: all 0.3s ease;
+
+        font-family: inherit;
+        line-height: 1.5;
+        box-sizing: border-box;
 
         .bold {
             font-weight: 600;

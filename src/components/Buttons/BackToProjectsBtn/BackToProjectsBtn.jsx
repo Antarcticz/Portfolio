@@ -1,0 +1,26 @@
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import './BackToProjectsBtn.scss';
+
+const BackToProjectsBtn = () => {
+    const navigate = useNavigate();
+
+    const handleBack = () => {
+        navigate('/projects');
+    };
+
+    return (
+        <button
+            type="button"
+            className="back-btn"
+            onClick={handleBack}
+            aria-label="Back to the projects page"
+        >
+            <FontAwesomeIcon icon={['fas', 'arrow-left']} aria-hidden="true" />
+            <span className="bold">Back to Projects</span>
+        </button>
+    );
+};
+
+export default BackToProjectsBtn;

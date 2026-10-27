@@ -1,7 +1,7 @@
 import React from 'react';
 import usePageTitle from '../../hooks/usePageTitle';
 import SocialLinks from '../../components/SocialLinks/SocialLinks';
-import BackToTopBtn from '../../components/BackToTopBtn/BackToTopBtn';
+import BackToTopBtn from '../../components/Buttons/BackToTopBtn/BackToTopBtn';
 import profile from '../../assets/images/misc/profile.svg';
 import './Home.scss';
 

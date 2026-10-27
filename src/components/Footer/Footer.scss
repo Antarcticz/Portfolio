@@ -5,15 +5,30 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    text-align: center;
-    padding: 2rem 1rem;
-    gap: 1.5rem;
+    padding: 1rem;
+    gap: 1rem;
     background-color: $theme-surface;
     transition: background-color 0.3s ease;
 
+    @media (min-width: 933px) {
+        flex-direction: row;
+        white-space: nowrap;
+    }
+
+    .name,
+    .copyright {
+        font-size: 0.875rem;
+        opacity: 0.8;
+        transition: color 0.3s ease;
+
+        p {
+            color: $theme-on-surface;
+        }
+    }
+
     .footer-socials {
         display: flex;
-        gap: 2rem;
+        gap: 0.1rem;
 
         a {
             font-size: 1.5rem;
@@ -49,12 +64,5 @@ footer {
                 }
             }
         }
-    }
-
-    .copyright {
-        font-size: 0.875rem;
-        color: $theme-on-surface-variant;
-        opacity: 0.8;
-        transition: color 0.3s ease;
     }
 }

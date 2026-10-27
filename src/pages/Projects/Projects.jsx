@@ -1,7 +1,7 @@
 import React from 'react';
 import { projectData } from '../../data/projectData';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
-import BackToTopBtn from '../../components/BackToTopBtn/BackToTopBtn';
+import BackToTopBtn from '../../components/Buttons/BackToTopBtn/BackToTopBtn';
 import './Projects.scss';
 
 const Projects = () => {

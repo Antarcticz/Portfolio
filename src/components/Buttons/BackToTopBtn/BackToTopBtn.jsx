@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import useScroll from '../../hooks/useScroll';
+import useScroll from '../../../hooks/useScroll';
 import './BackToTopBtn.scss';
 
 const BackToTopBtn = () => {
