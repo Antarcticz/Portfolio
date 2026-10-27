@@ -18,6 +18,27 @@ const Navbar = () => {
                     <h2>Maximilian Hedman</h2>
                 </div>
 
+                <div className='nav-links-container'>
+                    <ul className='nav-links-desktop'>
+                        <li className='home-btn'>
+                            <NavLink
+                                to='/'
+                                className={({ isActive }) => isActive ? 'navbar-link active' : 'navbar-link'}
+                            >
+                                Home
+                            </NavLink>
+                        </li>
+                        <li className='projects-btn'>
+                            <NavLink
+                                to='/projects'
+                                className={({ isActive }) => isActive ? 'navbar-link active' : 'navbar-link'}
+                            >
+                                Projects
+                            </NavLink>
+                        </li>
+                    </ul>
+                </div>
+
                 <div className="nav-controls">
                     <button
                         className="theme-toggle"
@@ -59,27 +80,6 @@ const Navbar = () => {
                         </li>
                     </ul>
                 </div>
-            </div>
-
-            <div className='nav-links-container'>
-                <ul className='nav-links-desktop'>
-                    <li>
-                        <NavLink
-                            to='/'
-                            className={({ isActive }) => isActive ? 'navbar-link active' : 'navbar-link'}
-                        >
-                            Home
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            to='/projects'
-                            className={({ isActive }) => isActive ? 'navbar-link active' : 'navbar-link'}
-                        >
-                            Projects
-                        </NavLink>
-                    </li>
-                </ul>
             </div>
         </nav>
     );

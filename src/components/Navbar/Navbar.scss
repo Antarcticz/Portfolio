@@ -8,6 +8,8 @@ nav {
     transition: background-color 0.3s ease;
 
     @media (min-width: 933px) {
+        flex-direction: row;
+        align-items: center;
         gap: 1.5rem;
     }
 }
@@ -21,7 +23,7 @@ nav {
     position: relative;
 
     @media (min-width: 933px) {
-        justify-content: center;
+        gap: 4rem;
     }
 }
 
@@ -48,11 +50,6 @@ nav {
     display: flex;
     align-items: center;
     gap: 1rem;
-
-    @media (min-width: 933px) {
-        position: absolute;
-        right: 0;
-    }
 }
 
 .theme-toggle {
@@ -157,16 +154,59 @@ nav {
 }
 
 .nav-links-container {
+
+    @media (min-width: 933px) {
+        flex: 1;
+    }
+
     .nav-links-desktop {
         display: none;
         list-style: none;
         padding: 0;
         margin: 0;
-        gap: 1.5rem;
 
         @media (min-width: 933px) {
             display: flex;
             justify-content: center;
+            align-items: stretch;
+            /* Ensures buttons are same height */
+            gap: 0;
+
+            /* Target Design: Container Styling */
+            background-color: #ffffff;
+            border-radius: .5rem;
+            overflow: hidden;
+            /* Keeps link hover backgrounds inside the rounded corners */
+
+            li {
+                display: flex;
+                flex: 1;
+            }
+
+            .navbar-link {
+                /* Overrides base mobile link styles for the desktop pill */
+                border: none;
+                color: #000000;
+                font-weight: 400;
+                padding: 0.5rem 1.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+
+                &:hover {
+                    background-color: #f0f0f0;
+                    /* Slight gray on hover */
+                    color: #000000;
+                }
+
+                &.active {
+                    border-bottom: none;
+                    background-color: #a3a6ff;
+                    /* Distinct background for active state */
+                    color: #000000;
+                }
+            }
         }
     }
 }
@@ -177,6 +217,10 @@ nav {
     font-size: 1.25rem;
     transition: all 0.3s ease;
     border-bottom: 2px solid transparent;
+    padding: 1rem;
+    display: inline-block;
+
+    /* REMOVED: border: 2px solid red; (unless you still need it for mobile debugging) */
 
     &:focus-visible {
         outline: 2px solid $theme-primary-dim;

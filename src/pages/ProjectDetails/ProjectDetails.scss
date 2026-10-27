@@ -56,6 +56,8 @@
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: space-between;
+        //TODO Check with AI why it works when theres no ; and dont work when there is.
+        align-items: stretch
 
         img {
             width: 20%;
