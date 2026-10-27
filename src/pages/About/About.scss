@@ -1,0 +1,68 @@
+@use "../../partials/colors" as *;
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem;
+    gap: 3rem;
+
+    .introduction-container {
+        flex: 1 1 50px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        max-width: 50rem;
+
+        .introduction {
+            text-align: center;
+        }
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+
+        .bold {
+            font-weight: 700;
+        }
+
+        .primary {
+            color: $primary;
+        }
+    }
+}
+
+
+/*_________________________________MEDIA QUERY'S__________________________*/
+@media (min-width: 540px) {
+    .about-container {
+        gap: 4rem;
+        padding: 3rem 0;
+
+        .introduction p {
+            font-size: 38px;
+        }
+
+        .contact-info p {
+            font-size: 19px;
+        }
+    }
+}
+
+@media (min-width: 933px) {
+    .about-container {
+        gap: 5rem;
+        padding: 7rem 0 5rem 0;
+        
+        .contact-info p {
+            font-size: 22px;
+        }
+    }
+
+}

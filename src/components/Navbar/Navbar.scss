@@ -1,0 +1,73 @@
+@use "../../partials/colors" as *;
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: $surface;
+
+    @media (min-width: 933px) {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+
+.brand-container {
+    h2 {
+        font-family: "Dancing Script", cursive;
+        font-weight: 700;
+        color: $on-surface;
+        font-size: 26px;
+        margin: 0;
+
+        @media (min-width: 540px) {
+            font-size: 36px;
+        }
+
+        @media (min-width: 933px) {
+            font-size: 60px;
+        }
+    }
+}
+
+.nav-links-container {
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    .nav-links-mobile {
+        @media (min-width: 933px) {
+            display: none;
+        }
+    }
+
+    .nav-links-desktop {
+        display: none;
+
+        @media (min-width: 933px) {
+            display: flex;
+        }
+    }
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: $on-surface;
+    font-size: 20px;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: $primary;
+    }
+
+    &.active,
+    &#active {
+        color: $primary;
+    }
+}
