@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import useProject from '../../hooks/useProject';
 import usePageTitle from '../../hooks/usePageTitle';
 import { projectData } from '../../data/projectData';
 import BackToProjectsBtn from '../../components/BackToProjectsBtn/BackToProjectsBtn';
@@ -7,8 +8,7 @@ import BackToTopBtn from '../../components/BackToTopBtn/BackToTopBtn';
 import './ProjectDetails.scss';
 
 const ProjectDetails = () => {
-    const { id } = useParams();
-    const project = projectData.find(p => p.id === Number(id));
+    const project = useProject();
 
     usePageTitle(project?.title);
 
