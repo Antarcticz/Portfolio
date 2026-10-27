@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom';
 import './ProjectCard.scss';
 
 const ProjectCard = ({ project }) => {
+    const urlTitle = project.title.toLowerCase().replaceAll(' ', '-');
+
     return (
-        <Link to={`/project/${project.id}`} className='card-link'>
+        <Link to={`/project/${urlTitle}`} className='card-link'>
             <article className="card">
                 <div className="card-img">
                     {project.image ? (

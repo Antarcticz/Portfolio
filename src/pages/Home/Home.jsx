@@ -2,7 +2,7 @@ import React from 'react';
 import usePageTitle from '../../hooks/usePageTitle';
 import SocialLinks from '../../components/SocialLinks/SocialLinks';
 import BackToTopBtn from '../../components/BackToTopBtn/BackToTopBtn';
-import profile from '../../assets/profile.svg';
+import profile from '../../assets/images/profile.svg';
 import './Home.scss';
 
 const Home = () => {

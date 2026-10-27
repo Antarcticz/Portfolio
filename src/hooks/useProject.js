@@ -2,9 +2,12 @@ import { useParams } from 'react-router-dom';
 import { projectData } from '../data/projectData';
 
 const useProject = () => {
-    const { id } = useParams();
+    const { title } = useParams();
 
-    const project = projectData.find(p => p.id === Number(id));
+    const project = projectData.find(p => {
+        const formattedTitle = p.title.toLowerCase().replaceAll(' ', '-');
+        return formattedTitle === title;
+    });
 
     return project;
 };
