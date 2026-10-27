@@ -3,6 +3,7 @@ import figmaFoodApp from '../assets/images/figma_Food_app.svg';
 import figmaDevBnB from '../assets/images/figma_DevBnB.svg';
 import frontendMUI from '../assets/images/frontend_MUI.svg';
 import frontendVolontarpoolen from '../assets/images/figma_Volontarpoolen.svg';
+import figmaNeuShowcase from '../assets/images/figma_NEU_Showcase.svg';
 import bob from '../assets/images/Bob.svg'
 
 export const projectData = [
@@ -97,7 +98,7 @@ export const projectData = [
         role: null,
         duration: null,
         tools: null,
-        image: null,
+        image: figmaNeuShowcase,
         link: null,
         workInProgress: bob,
     },
