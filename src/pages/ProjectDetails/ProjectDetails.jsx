@@ -34,8 +34,8 @@ const ProjectDetails = () => {
 
     return (
         <main className="details-container slide-mode">
-            {/* The area inside this div acts as the scroll interceptor */}
-            <div className="slider-interceptor-area" ref={containerRef}>
+            {/* The ref is REMOVED from this outer wrapper */}
+            <div className="slider-interceptor-area">
                 <header className="details-header">
                     <h1>{project.title}</h1>
                     <div className="metadata-grid">
@@ -77,7 +77,9 @@ const ProjectDetails = () => {
                     </div>
 
                     <div className="main-content-column">
-                        <div className="active-slide-content">
+
+                        {/* The ref is ADDED here, perfectly targeting your red box area */}
+                        <div className="active-slide-content" ref={containerRef}>
                             <div className={`slide-visuals ${currentSlideData?.images?.length > 1 ? 'multi-image' : ''}`}>
                                 {currentSlideData?.images && currentSlideData.images.length > 0 ? (
                                     currentSlideData.images.map((img, idx) => (
@@ -94,14 +96,8 @@ const ProjectDetails = () => {
                         </div>
 
                         <div className="bottom-actions">
-                            <BackToProjectsBtn />
                             <ProjectSourceBtn />
-
-                            {/* {project.link && (
-                                <a href={project.link} target="_blank" rel="noreferrer" className="cta-link-bottom">
-                                    View Project Source / Prototype
-                                </a>
-                            )} */}
+                            <BackToProjectsBtn />
                         </div>
                     </div>
                 </section>

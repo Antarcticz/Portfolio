@@ -4,7 +4,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: max-content;
+    width: 100%;
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
     background-color: #7b88ff;
@@ -17,6 +17,10 @@
     font-family: inherit;
     line-height: 1.5;
     box-sizing: border-box;
+
+    @media (min-width: 768px) {
+        width: max-content;
+    }
 
     .bold {
         font-weight: 600;
