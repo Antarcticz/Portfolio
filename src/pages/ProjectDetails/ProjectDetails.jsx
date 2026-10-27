@@ -110,8 +110,8 @@ const ProjectDetails = () => {
                         </div>
 
                         <div className="bottom-actions">
-                            <BackToProjectsBtn />
                             <ProjectSourceBtn />
+                            <BackToProjectsBtn />
                         </div>
                     </div>
                 </section>
