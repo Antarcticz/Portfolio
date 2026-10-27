@@ -3,7 +3,7 @@ import figma_FoodApp_Showcase from '../assets/images/figma/Food_App/Food_app.svg
 import figma_DevBnB_Showcase from '../assets/images/figma/DevBnB/DevBnB.svg';
 import figma_Volontarpoolen_Showcase from '../assets/images/figma/Volontarpoolen/Volontarpoolen.svg';
 import figma_NEU_Showcase from '../assets/images/figma/NEU/NEU_Showcase.svg';
-import frontend_MUI_Showcase from '../assets/images/frontend/MUI/MUI_Showcase';
+import frontend_MUI_Showcase from '../assets/images/frontend/MUI/MUI_Showcase.svg';
 import bob from '../assets/images/misc/bob.svg'
 
 export const projectData = [
