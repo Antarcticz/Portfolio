@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { projectData } from '../../data/projectData';
+import BackToTopBtn from '../../components/BackToTopBtn/BackToTopBtn';
 import './ProjectDetails.scss';
 
 const ProjectDetails = () => {
@@ -94,6 +95,7 @@ const ProjectDetails = () => {
                     </footer>
                 )}
             </section>
+            <BackToTopBtn />
         </main>
     );
 };

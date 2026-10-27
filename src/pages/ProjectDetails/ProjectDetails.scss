@@ -1,12 +1,16 @@
 @use "../../partials/colors" as *;
 
 .details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 6rem 2rem;
     background-color: $surface;
     color: $on-surface;
 
     .details-content {
         max-width: 55rem;
+        padding-bottom: 6rem;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
