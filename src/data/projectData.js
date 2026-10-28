@@ -1,7 +1,11 @@
 import figma_Vanner_Showcase from '../assets/images/figma/Vanner/Vanner.svg';
+
 import figma_FoodApp_Showcase from '../assets/images/figma/Food_App/Food_app.svg';
+
 import figma_DevBnB_Showcase from '../assets/images/figma/DevBnB/DevBnB.svg';
+
 import figma_Volontarpoolen_Showcase from '../assets/images/figma/Volontarpoolen/Volontarpoolen.svg';
+
 
 import figma_NEU_Showcase from '../assets/images/figma/NEU/NEU_Showcase.svg';
 import figma_NEU_Start from '../assets/images/figma/NEU/NEU_Start.svg';
@@ -9,15 +13,18 @@ import figma_NEU_Profile from '../assets/images/figma/NEU/NEU_Profile.svg';
 import figma_NEU_AI from '../assets/images/figma/NEU/NEU_AI.svg';
 import figma_NEU_Mood_Track from '../assets/images/figma/NEU/NEU_Mood_Track.svg';
 
-import frontend_MUI_Showcase from '../assets/images/frontend/MUI/MUI_Showcase.svg'
-import frontend_MUI_Login from '../assets/images/frontend/MUI/MUI_Login.svg'
-import frontend_MUI_Register from '../assets/images/frontend/MUI/MUI_Register.svg'
-import frontend_MUI_Flappy from '../assets/images/frontend/MUI/MUI_Flappy.svg'
-import frontend_MUI_Snake from '../assets/images/frontend/MUI/MUI_Snake.svg'
-import frontend_MUI_XP from '../assets/images/frontend/MUI/MUI_XP.svg'
-import frontend_MUI_Pages from '../assets/images/frontend/MUI/MUI_Pages.svg'
+import frontend_MUI_Showcase from '../assets/images/frontend/MUI/MUI_Showcase.svg';
+import frontend_MUI_Login from '../assets/images/frontend/MUI/MUI_Login.svg';
+import frontend_MUI_Register from '../assets/images/frontend/MUI/MUI_Register.svg';
+import frontend_MUI_Flappy from '../assets/images/frontend/MUI/MUI_Flappy.svg';
+import frontend_MUI_Snake from '../assets/images/frontend/MUI/MUI_Snake.svg';
+import frontend_MUI_XP from '../assets/images/frontend/MUI/MUI_XP.svg';
+import frontend_MUI_Pages from '../assets/images/frontend/MUI/MUI_Pages.svg';
 
-import bob from '../assets/images/misc/bob.svg'
+import frontend_Todo_List_Showcase from '../assets/images/frontend/Todo_List/Todo_List_Showcase.svg';
+
+import Epilepsy_Warning from '../assets/images/misc/Epilepsy_Warning.svg';
+import bob from '../assets/images/misc/bob.svg';
 
 export const projectData = [
     {
@@ -30,7 +37,7 @@ export const projectData = [
         duration: `2 weeks`,
         tools: [`React Native`, `Expo`, `Firebase`],
         imageShowcase: frontend_MUI_Showcase,
-        imageDetails: [frontend_MUI_Login, frontend_MUI_Register, frontend_MUI_Flappy, frontend_MUI_Snake, frontend_MUI_XP, frontend_MUI_Pages],
+        imageDetails: [frontend_MUI_Login, frontend_MUI_Register, frontend_MUI_Pages, frontend_MUI_Flappy, frontend_MUI_Snake, frontend_MUI_XP],
         figmaEmbed: null,
         demo: `<Instert demo description here>`,
         link: 'https://mission-usage-impossible.netlify.app/',
@@ -40,7 +47,8 @@ export const projectData = [
         problem: null,
         research: null,
         outcome: null,
-        workInProgress: bob,
+        imageWarning: Epilepsy_Warning,
+        workInProgress: null,
     },
     {
         id: 2,
@@ -54,7 +62,7 @@ export const projectData = [
         imageShowcase: null,
         imageDetails: null,
         figmaEmbed: 'https://embed.figma.com/proto/yYdzTYlrWGMftGaBSalEGl/OrganAise--Copy-?node-id=8550-162303&scaling=scale-down&content-scaling=fixed&page-id=8550%3A147259&starting-point-node-id=8550%3A162303&hide-ui=1&embed-host=share',
-        link: null,
+        link: 'https://www.figma.com/proto/yYdzTYlrWGMftGaBSalEGl/OrganAise--Copy-?node-id=8550-171593&starting-point-node-id=8550%3A171593&t=UQftWwTnIdHJ66Qg-1',
         demo: `<Instert demo description here>`,
         overview: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
         problem: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
@@ -62,6 +70,7 @@ export const projectData = [
         design: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
         outcome: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
         reflection: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
+        imageWarning: null,
         workInProgress: bob,
     },
     {
@@ -84,6 +93,7 @@ export const projectData = [
         design: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
         outcome: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
         reflection: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
+        imageWarning: null,
         workInProgress: bob,
     },
     {
@@ -95,17 +105,18 @@ export const projectData = [
         role: null,
         duration: null,
         tools: null,
-        imageShowcase: null,
-        imageDetails: null,
+        imageShowcase: frontend_Todo_List_Showcase,
+        imageDetails: [frontend_Todo_List_Showcase, frontend_Todo_List_Showcase, frontend_Todo_List_Showcase, frontend_Todo_List_Showcase,],
         figmaEmbed: null,
         link: 'https://todo-list.maximilian-hedman.workers.dev/',
         demo: `<Instert demo description here>`,
-        overview: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
-        problem: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
-        research: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
-        design: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
-        outcome: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
-        reflection: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
+        overview: `The Todo App is a simple yet powerful task management tool designed to help you organize, track, and complete your tasks efficiently. Whether you're managing daily chores, work assignments, or personal projects, this app ensures you stay productive and never forget an important task again.`,
+        problem: ``,
+        research: ``,
+        design: `1️⃣ Add a Task – Type in your task and hit "Add" or the "Enter key" to create a new item on your list.\n\n2️⃣ Start the Task – Click "Start" to begin working on a task. This marks it as ongoing, turning the task text orange and displaying a ⏳ indicator.\n\n3️⃣ Complete the Task – Once finished, click "Done", turning the task text green and removing the ongoing status. A ✔️ checkmark is added to indicate completion.\n\n4️⃣ Undo if Needed – If a task was marked done by mistake, click "Undo" to reset it.\n\n5️⃣ Delete Completed Tasks – Tasks can only be deleted once they are marked done, preventing accidental removal of unfinished work.`,
+        outcome: `🚀 Stay Organized – Never lose track of important tasks again.\n\n📅 Boost Productivity – Plan your work effectively and stay focused.\n\n🖥️ User-Friendly Interface – Simple, intuitive design for effortless task management.\n\n💾 No Data Loss – Your tasks remain stored even after closing the app.`,
+        reflection: `✅ Dynamic Task States – Tasks move through different stages: Not Started → Ongoing → Completed.\n\n✅ Visual Cues – Orange for ongoing, green for completed, with a checkmark for extra clarity.\n\n✅ Easy Task Management – Tasks are stacked neatly with buttons for Start, Done, Undo, and Delete in a clean, structured layout.\n\n✅ Local Storage Support – Your tasks are saved automatically, so they remain available even if you refresh the page.`,
+        imageWarning: null,
         workInProgress: bob,
     },
     {
@@ -120,7 +131,7 @@ export const projectData = [
         imageShowcase: figma_NEU_Showcase,
         imageDetails: [figma_NEU_Start, figma_NEU_AI, figma_NEU_Profile, figma_NEU_Mood_Track],
         figmaEmbed: 'https://embed.figma.com/proto/OnP8ryycodwf2s0Ran2P8g/NEU-DESIGNFILE?node-id=1963-15176&scaling=scale-down&content-scaling=fixed&page-id=1662%3A416&starting-point-node-id=1963%3A15176&hide-ui=1&embed-host=share',
-        link: null,
+        link: 'https://www.figma.com/proto/OnP8ryycodwf2s0Ran2P8g/NEU-DESIGNFILE?node-id=1963-10055&starting-point-node-id=1963%3A10055&t=aO2hbglKwvITeuo6-1',
         demo: `<Instert demo description here>`,
         overview: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
         problem: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
@@ -128,6 +139,7 @@ export const projectData = [
         design: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
         outcome: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
         reflection: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
+        imageWarning: null,
         workInProgress: bob,
     },
     {
@@ -142,7 +154,7 @@ export const projectData = [
         imageShowcase: figma_Volontarpoolen_Showcase,
         imageDetails: null,
         figmaEmbed: 'https://embed.figma.com/proto/BOH4nvtKdnXn2lqB5Fd0uK/Qubic-Agency---LLUH-Voloon%C3%A4rbyron?node-id=1740-15702&scaling=scale-down&content-scaling=fixed&page-id=1654%3A15201&starting-point-node-id=1740%3A15702&hide-ui=1&embed-host=share',
-        link: null,
+        link: 'https://www.figma.com/proto/BOH4nvtKdnXn2lqB5Fd0uK/Qubic-Agency---LLUH-Voloon%C3%A4rbyron?node-id=1740-15702&starting-point-node-id=1740%3A15702&content-scaling=responsive&t=hWHUHpJhlFkDueGa-1',
         demo: `<Instert demo description here>`,
         overview: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
         problem: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
@@ -150,6 +162,7 @@ export const projectData = [
         design: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
         outcome: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
         reflection: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
+        imageWarning: null,
         workInProgress: bob,
     },
     {
@@ -172,6 +185,7 @@ export const projectData = [
         design: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
         outcome: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
         reflection: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
+        imageWarning: null,
         workInProgress: bob,
     },
     {
@@ -194,6 +208,7 @@ export const projectData = [
         design: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
         outcome: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
         reflection: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
+        imageWarning: null,
         workInProgress: bob,
     },
     {
@@ -216,6 +231,7 @@ export const projectData = [
         design: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
         outcome: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
         reflection: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
+        imageWarning: null,
         workInProgress: bob,
     },
     {
@@ -238,6 +254,7 @@ export const projectData = [
         design: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
         outcome: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
         reflection: 'oawjeöofja woefj öaowe jöoajweöo jaöoweijfö oaijweöofij aöowejföoai jweöofija öwoeijföoai jweöfoijawöe oijfaöowiejf öoiajweöofija öowiejföoai jweoifjaöwo eijföoaiwjeföoij awöoejf öoaiwjeföoiajweö oifjöaoweijf öoaijweöfoi jaöwoiejföoaijweöofi jaöowiejfö oiajweöofi jaöwoeijföoaiw jeöofijawöoeifj öoaiwjeföo iajweöoifj aöoiwjeföoia jweoifjaö owiejföoaijwe ofijawöoeifj oaijweöf oijawöoefjoij',
+        imageWarning: null,
         workInProgress: bob,
     },
 ];

@@ -32,7 +32,13 @@ const useProjectSlides = (project) => {
                 id: 'reflection',
                 title: 'Reflection',
                 content: project.reflection,
-                images: project.imageDetails ? [project.imageDetails[5]] : []
+                images: project.imageDetails ? [project.imageDetails[2]] : []
+            },
+            {
+                id: 'outcome',
+                title: 'Outcome',
+                content: project.outcome,
+                images: project.imageDetails ? [project.imageDetails[3]] : []
             }
         ].filter(slide => slide.content);
     }, [project]);

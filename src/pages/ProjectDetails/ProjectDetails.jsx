@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import useProject from '../../hooks/useProject';
 import usePageTitle from '../../hooks/usePageTitle';
 import useProjectSlides from '../../hooks/useProjectSlides';
 import BackToProjectsBtn from '../../components/Buttons/BackToProjectsBtn/BackToProjectsBtn';
 import ProjectSourceBtn from '../../components/Buttons/ProjectSourceBtn/ProjectSourceBtn';
+import WarningModal from '../../components/Modals/WarningModal/WarningModal';
 import './ProjectDetails.scss';
 
 const ProjectDetails = () => {
@@ -18,6 +19,20 @@ const ProjectDetails = () => {
     } = useProjectSlides(project);
 
     usePageTitle(project?.title);
+
+    const [showWarningModal, setShowWarningModal] = useState(false);
+
+    const handleSourceClick = (e) => {
+        if (project?.imageWarning) {
+            e.preventDefault();
+            setShowWarningModal(true);
+        }
+    };
+
+    const confirmNavigation = () => {
+        setShowWarningModal(false);
+        window.open(project.link, '_blank', 'noopener,noreferrer');
+    };
 
     if (!project) {
         return (
@@ -110,11 +125,17 @@ const ProjectDetails = () => {
                         </div>
 
                         <div className="bottom-actions">
-                            <ProjectSourceBtn />
+                            <ProjectSourceBtn onClick={handleSourceClick} />
                             <BackToProjectsBtn />
                         </div>
                     </div>
                 </section>
+                <WarningModal
+                    isOpen={showWarningModal}
+                    onClose={() => setShowWarningModal(false)}
+                    onConfirm={confirmNavigation}
+                    warningImage={project?.imageWarning}
+                />
             </div>
         </main>
     );

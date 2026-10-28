@@ -22,9 +22,13 @@ const ProjectCard = ({ project }) => {
                         <h4>{project.title}</h4>
                         <p className="card-tag">{project.tag}</p>
                     </div>
-                    <div className='bob'>
-                        <img src={project.workInProgress} alt="Work in progress" title="Work in progress" />
-                    </div>
+
+                    {project.workInProgress && (
+                        <div className='bob'>
+                            <img src={project.workInProgress} alt="Work in progress" title="Work in progress" />
+                        </div>
+                    )}
+
                 </div>
             </article>
         </Link>
