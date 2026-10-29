@@ -38,7 +38,7 @@ const SocialLinks = () => {
                 </li>
                 <li>
                     <a
-                        href="mailto:maximilian_hedman@hotmail.com"
+                        href="mailto:maximilian.hedman.work@gmail.com"
                         aria-label="Send an email to Maximilian"
                     >
                         <FontAwesomeIcon icon={['fas', 'envelope']} aria-hidden="true" />
