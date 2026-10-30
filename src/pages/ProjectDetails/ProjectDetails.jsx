@@ -1,12 +1,16 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import './ProjectDetails.scss';
+
 import useProject from '../../hooks/useProject';
 import usePageTitle from '../../hooks/usePageTitle';
 import useProjectSlides from '../../hooks/useProjectSlides';
+
 import BackToProjectsBtn from '../../components/Buttons/BackToProjectsBtn/BackToProjectsBtn';
 import ProjectSourceBtn from '../../components/Buttons/ProjectSourceBtn/ProjectSourceBtn';
+
 import WarningModal from '../../components/Modals/WarningModal/WarningModal';
-import './ProjectDetails.scss';
+import ImageZoomModal from '../../components/Modals/ImageZoomModal/ImageZoomModal';
 
 const ProjectDetails = () => {
     const project = useProject();
@@ -21,6 +25,8 @@ const ProjectDetails = () => {
     usePageTitle(project?.title);
 
     const [showWarningModal, setShowWarningModal] = useState(false);
+
+    const [zoomedImage, setZoomedImage] = useState(null);
 
     const handleSourceClick = (e) => {
         if (project?.imageWarning) {
@@ -105,10 +111,18 @@ const ProjectDetails = () => {
                                     />
 
                                 ) : currentSlideData?.images && currentSlideData.images.length > 0 ? (
-                                    currentSlideData.images.map((img, idx) => (
-                                        <img key={idx} src={img} alt={`${project.title} ${currentSlideData.title} visual ${idx + 1}`} />
-                                    ))
-
+                                    currentSlideData.images.map((img, idx) => {
+                                        const altText = `${project.title} ${currentSlideData.title} visual ${idx + 1}`;
+                                        return (
+                                            <img
+                                                key={idx}
+                                                src={img}
+                                                alt={altText}
+                                                className="zoomable-image" // Added a class for CSS
+                                                onClick={() => setZoomedImage({ src: img, alt: altText })} // Sets the selected image
+                                            />
+                                        )
+                                    })
                                 ) : (
                                     <div className="placeholder">Visual assets coming soon</div>
                                 )}
@@ -135,6 +149,10 @@ const ProjectDetails = () => {
                     onClose={() => setShowWarningModal(false)}
                     onConfirm={confirmNavigation}
                     warningImage={project?.imageWarning}
+                />
+                <ImageZoomModal
+                    image={zoomedImage}
+                    onClose={() => setZoomedImage(null)}
                 />
             </div>
         </main>
