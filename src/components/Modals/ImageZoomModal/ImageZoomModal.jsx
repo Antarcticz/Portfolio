@@ -6,11 +6,16 @@ const ImageZoomModal = ({ image, onClose }) => {
 
     return (
         <div className="zoom-modal-overlay" onClick={onClose}>
-            <div className="zoom-modal-content" onClick={(e) => e.stopPropagation()}>
+            <div className="zoom-modal-content">
+                <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="zoomed-image"
+                    onClick={(e) => e.stopPropagation()}
+                />
                 <button className="close-zoom-btn" onClick={onClose} aria-label="Close zoomed image">
                     &times;
                 </button>
-                <img src={image.src} alt={image.alt} className="zoomed-image" />
             </div>
         </div>
     );
