@@ -12,8 +12,8 @@ const BackToProjectsBtn = () => {
 
     return (
         <button
+            className="back-to-project-btn"
             type="button"
-            className="back-btn"
             onClick={handleBack}
             aria-label="Back to the projects page"
         >

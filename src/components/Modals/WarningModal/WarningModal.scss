@@ -1,3 +1,6 @@
+@use "../../../partials/theme" as *;
+@use "../../../partials/colors" as *;
+
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -12,50 +15,65 @@
     padding: 1rem;
 
     .warning-modal {
-        background-color: #ffffff;
+        background-color: #fff;
         padding: 2.5rem 2rem;
-        border-radius: 12px;
+        border-radius: 1rem;
         max-width: 450px;
         width: 100%;
-        text-align: center;
         box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
 
-        .modal-warning-icon {
-            width: 60px;
-            height: 60px;
+        .modal-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
             margin-bottom: 1rem;
-        }
 
-        h3 {
-            color: #d32f2f;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+            .modal-warning-icon {
+                width: 7rem;
+                height: 7rem;
+            }
+
+            h3 {
+                color: #d32f2f;
+                font-size: 2rem;
+            }
         }
 
         p {
-            color: #333333;
+            color: $lt-on-surface;
             font-size: 1rem;
             line-height: 1.5;
             margin-bottom: 2rem;
+            text-align: left;
         }
 
         .modal-actions {
             display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
             gap: 1rem;
-            justify-content: center;
+
+            @media (min-width: 768px) {
+                flex-direction: row-reverse;
+            }
 
             button {
                 padding: 0.75rem 1.5rem;
-                font-size: 1rem;
+                font-size: 0.9rem;
                 font-weight: 600;
                 border-radius: 6px;
+                width: 100%;
                 border: none;
-                cursor: pointer;
                 transition: background-color 0.2s;
+                cursor: pointer;
+
+                @media (min-width: 768px) {
+                    white-space: nowrap;
+                }
             }
 
             .back-btn {
-                background-color: #e0e0e0;
+                background-color: hsl(0, 0%, 80%);
                 color: #333333;
 
                 &:hover {

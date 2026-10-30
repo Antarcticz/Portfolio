@@ -9,8 +9,8 @@ const BackToTopBtn = () => {
     return (
         <section className="back-to-top">
             <button
-                type="button"
                 className="scroll-btn"
+                type="button"
                 onClick={scrollToTop}
                 aria-label="Back to the top of the page"
             >
