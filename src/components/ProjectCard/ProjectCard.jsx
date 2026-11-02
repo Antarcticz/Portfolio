@@ -20,7 +20,7 @@ const ProjectCard = ({ project }) => {
                 <div className='card-text-container'>
                     <div className="card-text">
                         <h4>{project.title}</h4>
-                        <p className="card-tag">{project.tag}</p>
+                        <p className="card-tag">{project.tagShowcase}</p>
                     </div>
 
                     {project.workInProgress && (
