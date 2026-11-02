@@ -1,4 +1,6 @@
 @use "./partials/colors" as *;
+@use "./partials/theme" as *;
+
 
 * {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -9,7 +11,7 @@
 }
 
 body {
-    background-color: $surface;
+    background-color: $theme-surface;
     overflow-x: hidden;
     line-height: 1.5;
 }
