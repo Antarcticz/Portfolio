@@ -11,6 +11,12 @@
     gap: 3rem;
     transition: background-color 0.3s ease;
 
+    animation: fadeIn 0.8s ease-out;
+
+    @media (prefers-reduced-motion: reduce) {
+        animation: none;
+    }
+
     @media (min-width: 540px) {
         gap: 4rem;
     }
@@ -28,12 +34,6 @@
         width: 100%;
         max-width: 87.5rem;
         gap: 2rem;
-
-        animation: fadeIn 0.8s ease-out;
-
-        @media (prefers-reduced-motion: reduce) {
-            animation: none;
-        }
     }
 }
 

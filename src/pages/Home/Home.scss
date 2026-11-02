@@ -10,17 +10,15 @@
     background-color: $theme-surface;
     transition: background-color 0.3s ease;
 
-    
+    animation: fadeIn 0.8s ease-out;
+
+    @media (prefers-reduced-motion: reduce) {
+        animation: none;
+    }
 
     .home-hero {
         width: 100%;
         max-width: 87.5rem;
-
-        animation: fadeIn 0.8s ease-out;
-
-        @media (prefers-reduced-motion: reduce) {
-            animation: none;
-        }
 
         .hero-inner {
             display: flex;
@@ -81,12 +79,6 @@
         padding-bottom: 4rem;
         max-width: 87.5rem;
         width: 100%;
-
-        animation: fadeIn 0.8s ease-out;
-
-        @media (prefers-reduced-motion: reduce) {
-            animation: none;
-        }
 
         .info-block {
             background-color: $theme-surface-container;
