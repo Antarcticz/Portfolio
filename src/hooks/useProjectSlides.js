@@ -16,22 +16,34 @@ const useProjectSlides = (project) => {
                 images: project.imageDetails ? [project.imageDetails[0]] : []
             },
             {
+                id: 'problem',
+                title: 'Problem',
+                content: project.problem,
+                images: project.imageDetails ? [project.imageDetails[0]] : []
+            },
+            {
+                id: 'research',
+                title: 'Research',
+                content: project.research,
+                images: project.imageDetails ? [project.imageDetails[0]] : []
+            },
+            {
                 id: 'design',
                 title: 'Process & Design',
                 content: project.design,
                 images: project.imageDetails ? [project.imageDetails[1]] : []
             },
             {
-                id: 'reflection',
-                title: 'Reflection',
-                content: project.reflection,
-                images: project.imageDetails ? [project.imageDetails[2]] : []
-            },
-            {
                 id: 'outcome',
                 title: 'Outcome',
                 content: project.outcome,
                 images: project.imageDetails ? [project.imageDetails[3]] : []
+            },
+            {
+                id: 'reflection',
+                title: 'Reflection',
+                content: project.reflection,
+                images: project.imageDetails ? [project.imageDetails[2]] : []
             }
         ].filter(slide => slide.content);
     }, [project]);

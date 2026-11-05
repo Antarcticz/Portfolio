@@ -118,8 +118,8 @@ const ProjectDetails = () => {
                                                 key={idx}
                                                 src={img}
                                                 alt={altText}
-                                                className="zoomable-image" // Added a class for CSS
-                                                onClick={() => setZoomedImage({ src: img, alt: altText })} // Sets the selected image
+                                                className="zoomable-image"
+                                                onClick={() => setZoomedImage({ src: img, alt: altText })}
                                             />
                                         )
                                     })
