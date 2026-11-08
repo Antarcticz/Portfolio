@@ -24,12 +24,33 @@ const ImageZoomModal = ({ image, onClose }) => {
         setIsDragging(false);
     };
 
+    // --- NEW: Unified Zoom Function (Zoom to Pointer) ---
+    const updateZoom = (newScale, clientX = window.innerWidth / 2, clientY = window.innerHeight / 2) => {
+        const clampedScale = Math.max(0.2, Math.min(newScale, 5));
+        if (clampedScale === scale) return;
+
+        // Calculate how much the scale is actually changing
+        const ratio = clampedScale / scale;
+
+        // Calculate distance from the screen center to the cursor
+        const diffX = clientX - window.innerWidth / 2;
+        const diffY = clientY - window.innerHeight / 2;
+
+        // Shift the position simultaneously so the point under the cursor stays fixed!
+        setPosition({
+            x: diffX - (diffX - position.x) * ratio,
+            y: diffY - (diffY - position.y) * ratio
+        });
+
+        setScale(clampedScale);
+    };
+
     const handleWheel = (e) => {
         const zoomDirection = e.deltaY > 0 ? -1 : 1;
         const step = 0.1;
 
-        const newScale = Math.max(0.2, Math.min(scale + (zoomDirection * step), 5));
-        setScale(newScale);
+        // Pass the mouse's exact coordinates to zoom into that specific spot
+        updateZoom(scale + (zoomDirection * step), e.clientX, e.clientY);
     };
 
     const handlePointerDown = (e) => {
@@ -97,7 +118,8 @@ const ImageZoomModal = ({ image, onClose }) => {
                         max="5"
                         step="0.01"
                         value={scale}
-                        onChange={(e) => setScale(parseFloat(e.target.value))}
+                        // Slider defaults to zooming directly to/from the center of the screen
+                        onChange={(e) => updateZoom(parseFloat(e.target.value))}
                         className="zoom-slider"
                         aria-label="Zoom level"
                     />
