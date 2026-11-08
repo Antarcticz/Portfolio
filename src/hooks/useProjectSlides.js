@@ -80,7 +80,7 @@ const useProjectSlides = (project) => {
 
             e.deltaY > 0 ? handleNext() : e.deltaY < 0 ? handlePrev() : null;
 
-            setTimeout(() => { isScrolling.current = false; }, 800);
+            setTimeout(() => { isScrolling.current = false; }, 100);
         };
 
         const handleTouchStart = (e) => {
