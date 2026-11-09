@@ -150,10 +150,49 @@ const ProjectDetails = () => {
                     onConfirm={confirmNavigation}
                     warningImage={project?.imageWarning}
                 />
-                <ImageZoomModal
-                    image={zoomedImage}
-                    onClose={() => setZoomedImage(null)}
-                />
+                {zoomedImage && (
+                    <ImageZoomModal
+                        image={zoomedImage}
+                        onClose={() => setZoomedImage(null)}
+
+                        onPrev={() => {
+                            if (!project || !project.imageDetails) return;
+
+                            const currentImg = typeof zoomedImage === 'string' ? zoomedImage : zoomedImage.src;
+
+                            const currentIndex = project.imageDetails.findIndex(img => img === currentImg);
+
+                            if (currentIndex > 0) {
+                                const prevImg = project.imageDetails[currentIndex - 1];
+
+                                setZoomedImage(typeof zoomedImage === 'string' ? prevImg : { ...zoomedImage, src: prevImg });
+
+                                const matchingSlideIndex = slides.findIndex(slide => slide.images && slide.images[0] === prevImg);
+                                if (matchingSlideIndex !== -1) {
+                                    setActiveSlide(matchingSlideIndex);
+                                }
+                            }
+                        }}
+
+                        onNext={() => {
+                            if (!project || !project.imageDetails) return;
+
+                            const currentImg = typeof zoomedImage === 'string' ? zoomedImage : zoomedImage.src;
+                            const currentIndex = project.imageDetails.findIndex(img => img === currentImg);
+
+                            if (currentIndex !== -1 && currentIndex < project.imageDetails.length - 1) {
+                                const nextImg = project.imageDetails[currentIndex + 1];
+
+                                setZoomedImage(typeof zoomedImage === 'string' ? nextImg : { ...zoomedImage, src: nextImg });
+
+                                const matchingSlideIndex = slides.findIndex(slide => slide.images && slide.images[0] === nextImg);
+                                if (matchingSlideIndex !== -1) {
+                                    setActiveSlide(matchingSlideIndex);
+                                }
+                            }
+                        }}
+                    />
+                )}
             </div>
         </main>
     );

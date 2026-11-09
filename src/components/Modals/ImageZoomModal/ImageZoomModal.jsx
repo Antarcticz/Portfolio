@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './ImageZoomModal.scss';
 
-const ImageZoomModal = ({ image, onClose }) => {
+// Added onPrev and onNext props
+const ImageZoomModal = ({ image, onClose, onPrev, onNext }) => {
     const [scale, setScale] = useState(1);
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const [isDragging, setIsDragging] = useState(false);
@@ -13,12 +14,9 @@ const ImageZoomModal = ({ image, onClose }) => {
             setScale(1);
             setPosition({ x: 0, y: 0 });
             setIsDragging(false);
-
-            // Locks the background page from scrolling and hides its scrollbar
             document.body.style.overflow = 'hidden';
         }
 
-        // Cleanup function: Restores the scrollbar when the modal closes or unmounts
         return () => {
             document.body.style.overflow = '';
         };
@@ -56,7 +54,6 @@ const ImageZoomModal = ({ image, onClose }) => {
 
     const handlePointerDown = (e) => {
         e.preventDefault();
-
         setIsDragging(true);
         e.target.setPointerCapture(e.pointerId);
 
@@ -111,21 +108,37 @@ const ImageZoomModal = ({ image, onClose }) => {
 
             <div className="workspace-ui">
 
-                <div className="zoom-controls">
-                    <span className="zoom-stats">{Math.round(scale * 100)}%</span>
-                    <input
-                        type="range"
-                        min="0.2"
-                        max="5"
-                        step="0.01"
-                        value={scale}
-                        onChange={(e) => updateZoom(parseFloat(e.target.value))}
-                        className="zoom-slider"
-                        aria-label="Zoom level"
-                    />
-                    <button className="reset-zoom-btn" onClick={handleReset} aria-label="Reset zoom" title="Reset zoom">
-                        &#x21BA;
-                    </button>
+                {/* Wrapped both control panels in a single flex group */}
+                <div className="control-group">
+                    <div className="zoom-controls">
+                        <span className="zoom-stats">{Math.round(scale * 100)}%</span>
+                        <input
+                            type="range"
+                            min="0.2"
+                            max="5"
+                            step="0.01"
+                            value={scale}
+                            onChange={(e) => updateZoom(parseFloat(e.target.value))}
+                            className="zoom-slider"
+                            aria-label="Zoom level"
+                        />
+                        <button className="reset-zoom-btn" onClick={handleReset} aria-label="Reset zoom" title="Reset zoom">
+                            &#x21BA;
+                        </button>
+                    </div>
+
+                    {/* NEW: Navigation Controls */}
+                    {onPrev && onNext && (
+                        <div className="nav-controls">
+                            <button className="nav-btn" onClick={onPrev} aria-label="Previous image">
+                                &#10094;
+                            </button>
+                            <div className="nav-divider"></div>
+                            <button className="nav-btn" onClick={onNext} aria-label="Next image">
+                                &#10095;
+                            </button>
+                        </div>
+                    )}
                 </div>
 
                 <button className="close-zoom-btn" onClick={onClose} aria-label="Close workspace">
