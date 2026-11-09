@@ -17,9 +17,6 @@ import figma_NEU_Mood_Track from '../assets/images/figma/NEU/NEU_Mood_Track.svg'
 import frontend_MUI_Showcase from '../assets/images/frontend/MUI/MUI_Showcase.svg';
 import frontend_MUI_Login from '../assets/images/frontend/MUI/MUI_Login.svg';
 import frontend_MUI_Register from '../assets/images/frontend/MUI/MUI_Register.svg';
-import frontend_MUI_Flappy from '../assets/images/frontend/MUI/MUI_Flappy.svg';
-import frontend_MUI_Snake from '../assets/images/frontend/MUI/MUI_Snake.svg';
-import frontend_MUI_XP from '../assets/images/frontend/MUI/MUI_XP.svg';
 import frontend_MUI_Pages from '../assets/images/frontend/MUI/MUI_Pages.svg';
 
 import frontend_Todo_List_Showcase from '../assets/images/frontend/Todo_List/Todo_List_Showcase.svg';
@@ -91,8 +88,8 @@ export const projectData = [
         problem: `Description coming soon`,
         research: `Description coming soon`,
         design: `Description coming soon`,
-        outcome: `Description coming soon`,
-        reflection: `Description coming soon`,
+        outcome: null,
+        reflection: null,
         imageWarning: null,
         workInProgress: bob,
     },
@@ -151,7 +148,7 @@ export const projectData = [
         duration: `2 weeks`,
         tools: [`React Native`, `Expo`, `Firebase`],
         imageShowcase: frontend_MUI_Showcase,
-        imageDetails: [frontend_MUI_Login, frontend_MUI_Register, frontend_MUI_Pages, frontend_MUI_Flappy, frontend_MUI_Snake, frontend_MUI_XP],
+        imageDetails: [frontend_MUI_Login, frontend_MUI_Register, frontend_MUI_Pages],
         link: 'https://mission-usage-impossible.netlify.app/',
         overview: `Mission: Usage Impossible was a collaborative school project where we explored the boundaries of UX by intentionally breaking every rule.\n\nWorking alongside my classmate Desirée, who spearheaded the UI design and retro-inspired mini-games, I was responsible for the technical infrastructure, backend logic, and Firebase Authentication.\n\nOur goal was to create a fully functional app that is simultaneously a nightmare to use.\n\nThe project features a deliberately confusing onboarding flow, a landing page, user profiles, and a dedicated "irritation page" filled with unpredictable interactive elements.`,
         design: `While the UI was designed to be chaotic-featuring moving buttons, inconsistent contrasts, and Windows 95-inspired frustration. I focused on ensuring the underlying architecture was clean and modular.\n\nI implemented Firebase Authentication to handle user sessions amidst the chaos. A key challenge was supporting the "frustrating" logic (like unpredictable interactions) with stable code.\n\nWhile Desirée integrated playful elements like Snake and Flappy Bird clones, I ensured that despite the poor user experience, the app remained technically robust and fully functional.`,
