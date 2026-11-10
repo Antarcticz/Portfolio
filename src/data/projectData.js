@@ -1,6 +1,9 @@
 import figma_Vanner_Showcase from '../assets/images/figma/Vanner/Vanner.svg';
+
 import figma_FoodApp_Showcase from '../assets/images/figma/Food_App/Food_app.svg';
+
 import figma_DevBnB_Showcase from '../assets/images/figma/DevBnB/DevBnB.svg';
+
 import figma_Volontarpoolen_Showcase from '../assets/images/figma/Volontarpoolen/Volontarpoolen.svg';
 
 import figma_Organaise_Showcase from '../assets/images/figma/OrganAise/Organaise_Showcase.svg';
