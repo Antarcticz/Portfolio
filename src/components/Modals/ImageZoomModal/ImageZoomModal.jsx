@@ -8,7 +8,6 @@ const ImageZoomModal = ({ image, onClose, onPrev, onNext }) => {
 
     const dragStart = useRef({ x: 0, y: 0 });
 
-    // NEW: Multi-touch tracking for mobile pinch-to-zoom
     const activePointers = useRef(new Map());
     const pinchSnapshot = useRef(null);
 
@@ -19,7 +18,6 @@ const ImageZoomModal = ({ image, onClose, onPrev, onNext }) => {
             setIsDragging(false);
             document.body.style.overflow = 'hidden';
 
-            // Clear any lingering touches if the image changes
             activePointers.current.clear();
             pinchSnapshot.current = null;
         }
@@ -59,31 +57,26 @@ const ImageZoomModal = ({ image, onClose, onPrev, onNext }) => {
         updateZoom(scale + (zoomDirection * step), e.clientX, e.clientY);
     };
 
-    // --- UPDATED: Pointer Handlers with Multi-Touch Support ---
     const handlePointerDown = (e) => {
         e.preventDefault();
         e.target.setPointerCapture(e.pointerId);
 
-        // Register the new finger touching the screen
         activePointers.current.set(e.pointerId, { x: e.clientX, y: e.clientY });
 
         if (activePointers.current.size === 1) {
-            // One finger: Standard dragging
             setIsDragging(true);
             dragStart.current = {
                 x: e.clientX - position.x,
                 y: e.clientY - position.y
             };
         } else if (activePointers.current.size === 2) {
-            // Two fingers: Pinch-to-zoom initiated
-            setIsDragging(false); // Stop dragging while zooming
+            setIsDragging(false);
 
             const pts = Array.from(activePointers.current.values());
             const dist = Math.hypot(pts[0].x - pts[1].x, pts[0].y - pts[1].y);
             const centerX = (pts[0].x + pts[1].x) / 2;
             const centerY = (pts[0].y + pts[1].y) / 2;
 
-            // Take a snapshot of the state the exact moment the second finger touches
             pinchSnapshot.current = {
                 dist,
                 scale,
@@ -94,10 +87,8 @@ const ImageZoomModal = ({ image, onClose, onPrev, onNext }) => {
     };
 
     const handlePointerMove = (e) => {
-        // If we aren't tracking this pointer, ignore it
         if (!activePointers.current.has(e.pointerId)) return;
 
-        // Update the current location of this specific finger
         activePointers.current.set(e.pointerId, { x: e.clientX, y: e.clientY });
 
         if (activePointers.current.size === 1 && isDragging) {
@@ -107,16 +98,13 @@ const ImageZoomModal = ({ image, onClose, onPrev, onNext }) => {
                 y: e.clientY - dragStart.current.y
             });
         } else if (activePointers.current.size === 2 && pinchSnapshot.current) {
-            // Two fingers moving
             const pts = Array.from(activePointers.current.values());
             const currentDist = Math.hypot(pts[0].x - pts[1].x, pts[0].y - pts[1].y);
 
             const { dist: initialDist, scale: initialScale, position: initialPos, center } = pinchSnapshot.current;
 
-            // Calculate how much the scale changed relative to the initial pinch snapshot
             const newScale = Math.max(0.2, Math.min(initialScale * (currentDist / initialDist), 5));
 
-            // Zoom directly into the center point between the two fingers
             const ratio = newScale / initialScale;
             const diffX = center.x - window.innerWidth / 2;
             const diffY = center.y - window.innerHeight / 2;
@@ -130,7 +118,6 @@ const ImageZoomModal = ({ image, onClose, onPrev, onNext }) => {
     };
 
     const handlePointerUp = (e) => {
-        // Remove the finger that just left the screen
         activePointers.current.delete(e.pointerId);
         e.target.releasePointerCapture(e.pointerId);
 
@@ -138,8 +125,6 @@ const ImageZoomModal = ({ image, onClose, onPrev, onNext }) => {
             setIsDragging(false);
             pinchSnapshot.current = null;
         } else {
-            // If they lift one finger after a pinch, disable dragging until they lift all fingers.
-            // This prevents the image from wildly snapping across the screen!
             setIsDragging(false);
         }
     };
@@ -158,7 +143,6 @@ const ImageZoomModal = ({ image, onClose, onPrev, onNext }) => {
                 onMouseDown={(e) => e.preventDefault()}
                 style={{
                     cursor: isDragging ? 'grabbing' : 'grab',
-                    // CRITICAL FIX: Tells mobile browsers NOT to intercept our touch gestures
                     touchAction: 'none'
                 }}
             >
