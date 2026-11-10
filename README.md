@@ -14,11 +14,11 @@ A high-performance personal portfolio built with **React + Vite**, focusing on c
 * **Core:** React 18 + Vite
 * **Styling:** SCSS (Modular variables & mixins)
 * **Navigation:** React Router 6
-* **Deployment:** Netlify
+* **Deployment:** Cloudflare
 
 ## 🚀 Live Demo
 
-[Visit the live site](https://maximilian-hedman.netlify.app/)
+[Visit the live site](https://portfolio.maximilian-hedman.workers.dev/)
 
 ---
 Built with a focus on clean code and performance by **Maximilian Hedman**.
