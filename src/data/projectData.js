@@ -7,12 +7,12 @@ import figma_DevBnB_Showcase from '../assets/images/figma/DevBnB/DevBnB.svg';
 import figma_Volontarpoolen_Showcase from '../assets/images/figma/Volontarpoolen/Volontarpoolen.svg';
 
 import figma_Organaise_Showcase from '../assets/images/figma/OrganAise/Organaise_Showcase.svg';
-import figma_Organaise_Quick_Event_Doc_Full from '../assets/images/figma/OrganAise/Organaise_Quick_Event_Doc_Full.svg';
-import figma_Organaise_Task_Board from '../assets/images/figma/OrganAise/Organaise_Task_Board.svg';
-import figma_Organaise_Calendar_Shell from '../assets/images/figma/OrganAise/Organaise_Calendar_Shell.svg';
-import figma_Organaise_Calendar_Views from '../assets/images/figma/OrganAise/Organaise_Calendar_Views.svg';
-import figma_Organaise_Bookings from '../assets/images/figma/OrganAise/Organaise_Bookings.svg';
-import figma_Organaise_Event_Poll from '../assets/images/figma/OrganAise/Organaise_Event_Poll.svg';
+import figma_Organaise_Quick_Event_Doc from '../assets/images/figma/OrganAise/Organaise_Quick_Event_Doc.png';
+import figma_Organaise_Task_Board from '../assets/images/figma/OrganAise/Organaise_Task_Board.png';
+import figma_Organaise_Calendar_Shell from '../assets/images/figma/OrganAise/Organaise_Calendar_Shell.png';
+import figma_Organaise_Calendar_Views from '../assets/images/figma/OrganAise/Organaise_Calendar_Views.png';
+import figma_Organaise_Bookings from '../assets/images/figma/OrganAise/Organaise_Bookings.png';
+import figma_Organaise_Event_Poll from '../assets/images/figma/OrganAise/Organaise_Event_Poll.png';
 
 import figma_NEU_Showcase from '../assets/images/figma/NEU/NEU_Showcase.svg';
 import figma_NEU_Start from '../assets/images/figma/NEU/NEU_Start.svg';
@@ -44,7 +44,7 @@ export const projectData = [
         duration: null,
         tools: null,
         imageShowcase: figma_Organaise_Showcase,
-        imageDetails: [figma_Organaise_Quick_Event_Doc_Full, figma_Organaise_Task_Board, figma_Organaise_Calendar_Shell, figma_Organaise_Calendar_Views, figma_Organaise_Bookings, figma_Organaise_Event_Poll],
+        imageDetails: [figma_Organaise_Quick_Event_Doc, figma_Organaise_Task_Board, figma_Organaise_Calendar_Shell, figma_Organaise_Calendar_Views, figma_Organaise_Bookings, figma_Organaise_Event_Poll],
         link: 'https://www.figma.com/proto/yYdzTYlrWGMftGaBSalEGl/OrganAise--Copy-?node-id=8550-171593&starting-point-node-id=8550%3A171593&t=UQftWwTnIdHJ66Qg-1',
         overview: `OrganAise is a scheduling platform designed for busy professionals who balance multiple projects, clients, and business responsibilities. The goal of the project was to rethink the scheduling experience so that users can move from intent to a confirmed meeting in as few steps as possible, without losing control of their time.\n\nDuring my internship from November 2025 to April 2026, I served as the Design Lead and Team Leader. I managed a team of four, acting as the primary bridge between the design team, the developers, and the CEO. My focus was not only on shaping the core user experience but also on establishing a rigorous agile workflow, building a scalable Design System, and creating code-close documentation to ensure a seamless developer handoff.`,
         problem: `The biggest challenges on this project were rooted in strict business constraints and the need to align cross-functional workflows.\n\nThe "Mission Impossible" Design Constraints: The CEO and CPO handed us a challenging task: we were required to keep every single existing function visible, but we were strictly forbidden from using scrolling or pop-up modals. Finding a way to make the interface feel spacious and focused on active tasks while adhering to these limitations was incredibly difficult. I often had to personally pitch and advocate for my design solutions to the CEO and CPO to ensure they met both business requirements and user needs.\n\nWorkflow Alignment: With a team of four designers working alongside developers and stakeholders, we lacked a unified workflow. The challenge was finding a middle ground that allowed for individual focus while maintaining strict alignment with the CPO's priorities and the development team's technical constraints.`,
