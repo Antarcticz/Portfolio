@@ -8,44 +8,29 @@ const useProjectSlides = (project) => {
     const containerRef = useRef(null);
 
     const slides = useMemo(() => {
-        return !project ? [] : [
-            {
-                id: 'overview',
-                title: 'Overview',
-                content: project.overview,
-                images: project.imageDetails ? [project.imageDetails[0]] : []
-            },
-            {
-                id: 'problem',
-                title: 'Problem',
-                content: project.problem,
-                images: project.imageDetails ? [project.imageDetails[0]] : []
-            },
-            {
-                id: 'research',
-                title: 'Research',
-                content: project.research,
-                images: project.imageDetails ? [project.imageDetails[0]] : []
-            },
-            {
-                id: 'design',
-                title: 'Process & Design',
-                content: project.design,
-                images: project.imageDetails ? [project.imageDetails[1]] : []
-            },
-            {
-                id: 'outcome',
-                title: 'Outcome',
-                content: project.outcome,
-                images: project.imageDetails ? [project.imageDetails[3]] : []
-            },
-            {
-                id: 'reflection',
-                title: 'Reflection',
-                content: project.reflection,
-                images: project.imageDetails ? [project.imageDetails[2]] : []
-            }
-        ].filter(slide => slide.content);
+        if (!project) return [];
+
+        const rawSlides = [
+            { id: 'overview', title: 'Overview', content: project.overview },
+            { id: 'problem', title: 'Problem', content: project.problem },
+            { id: 'research', title: 'Research', content: project.research },
+            { id: 'design', title: 'Process & Design', content: project.design },
+            { id: 'outcome', title: 'Outcome', content: project.outcome },
+            { id: 'reflection', title: 'Reflection', content: project.reflection }
+        ];
+
+        const activeSlides = rawSlides.filter(slide => slide.content);
+
+        return activeSlides.map((slide, index) => {
+            const imageForSlide = project.imageDetails && project.imageDetails[index]
+                ? [project.imageDetails[index]]
+                : [];
+
+            return {
+                ...slide,
+                images: imageForSlide
+            };
+        });
     }, [project]);
 
     const handleNext = useCallback(() => {
