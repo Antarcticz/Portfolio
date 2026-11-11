@@ -107,6 +107,8 @@
                     text-align: right;
                     user-select: none;
 
+                    min-width: 2.75rem;
+
                     @media (min-width: 768px) {
                         font-size: 1rem;
                     }
