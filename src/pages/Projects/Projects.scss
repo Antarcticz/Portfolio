@@ -8,8 +8,9 @@
     min-height: 100vh;
     padding: 8rem 0 2rem 0;
     background-color: $theme-surface;
-    gap: 3rem;
+    gap: 5rem;
     transition: background-color 0.3s ease;
+    width: 100%;
 
     animation: fadeIn 0.8s ease-out;
 
@@ -17,23 +18,62 @@
         animation: none;
     }
 
-    @media (min-width: 540px) {
-        gap: 4rem;
+    .mobile-carousels {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+
+        @media (min-width: 933px) {
+            display: none;
+        }
     }
 
-    @media (min-width: 933px) {
-        gap: 5rem;
+    .desktop-grid {
+        display: none;
+
+        @media (min-width: 933px) {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(100%, 23.75rem), 1fr));
+            justify-content: center;
+            padding: 0 2rem;
+            width: 100%;
+            max-width: 87.5rem;
+            gap: 2rem;
+        }
     }
 
-    .card-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(min(100%, 23.75rem), 1fr));
-        justify-content: center;
-        margin: 0 auto;
-        padding: 0 2rem;
+    .carousel-section {
         width: 100%;
         max-width: 87.5rem;
-        gap: 2rem;
+    }
+
+    .carousel-title {
+        padding-bottom: 1rem;
+        padding-left: 2rem;
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+
+    .card-container.carousel {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        padding: 0 2rem 1rem 2rem;
+        width: 100%;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        >* {
+            flex: 0 0 85vw;
+            scroll-snap-align: center;
+        }
     }
 }
 
