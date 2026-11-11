@@ -58,7 +58,7 @@
     .card-container.carousel {
         display: flex;
         flex-direction: row;
-        gap: 1.5rem;
+        gap: 2rem;
         padding: 0 2rem 1rem 2rem;
         width: 100%;
         overflow-x: auto;
@@ -71,7 +71,7 @@
         }
 
         >* {
-            flex: 0 0 85vw;
+            flex: 0 0 75vw;
             scroll-snap-align: center;
         }
     }
