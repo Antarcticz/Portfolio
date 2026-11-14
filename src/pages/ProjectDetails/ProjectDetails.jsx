@@ -25,7 +25,6 @@ const ProjectDetails = () => {
     usePageTitle(project?.title);
 
     const [showWarningModal, setShowWarningModal] = useState(false);
-
     const [zoomedImage, setZoomedImage] = useState(null);
 
     const handleSourceClick = (e) => {
@@ -57,6 +56,7 @@ const ProjectDetails = () => {
         <main className="details-container slide-mode">
             <div className="slider-interceptor-area">
                 <header className="details-header">
+                    {/* ... (keep your existing header code exactly the same) ... */}
                     <h1>{project.title}</h1>
                     <div className="metadata-grid">
                         {project.role && (
@@ -109,17 +109,29 @@ const ProjectDetails = () => {
                                         allowFullScreen
                                         title={`${project.title} Interactive Prototype`}
                                     />
-
                                 ) : currentSlideData?.images && currentSlideData.images.length > 0 ? (
                                     currentSlideData.images.map((img, idx) => {
                                         const altText = `${project.title} ${currentSlideData.title} visual ${idx + 1}`;
+
+                                        // 1. Find the global index of this specific preview image in the main array
+                                        const globalImageIndex = project.imagePreview?.indexOf(img) ?? -1;
+
+                                        // 2. Safely grab the matching high-res overview image (fallback to preview if overview is missing)
+                                        const highResImage = project.imageOverview && project.imageOverview[globalImageIndex]
+                                            ? project.imageOverview[globalImageIndex]
+                                            : img;
+
                                         return (
                                             <img
                                                 key={idx}
-                                                src={img}
+                                                src={img} // The slide still displays the lightweight preview
                                                 alt={altText}
                                                 className="zoomable-image"
-                                                onClick={() => setZoomedImage({ src: img, alt: altText })}
+                                                onClick={() => setZoomedImage({
+                                                    src: highResImage, // The modal opens the high-res overview
+                                                    alt: altText,
+                                                    globalIndex: globalImageIndex // Pass the index so prev/next works
+                                                })}
                                             />
                                         )
                                     })
@@ -129,6 +141,7 @@ const ProjectDetails = () => {
                             </div>
 
                             <div className="slide-text">
+                                {/* ... (keep your existing text code exactly the same) ... */}
                                 <h2>{currentSlideData?.title}</h2>
                                 {currentSlideData?.content?.split('\n').map((paragraph, index) => (
                                     paragraph.trim() !== '' && (
@@ -150,46 +163,42 @@ const ProjectDetails = () => {
                     onConfirm={confirmNavigation}
                     warningImage={project?.imageWarning}
                 />
+
+                {/* 3. Update the Modal navigation logic to use the globalIndex and imageOverview */}
                 {zoomedImage && (
                     <ImageZoomModal
                         image={zoomedImage}
                         onClose={() => setZoomedImage(null)}
 
                         onPrev={() => {
-                            if (!project || !project.imagePreview) return;
+                            if (!project || zoomedImage.globalIndex === undefined || zoomedImage.globalIndex <= 0) return;
 
-                            const currentImg = typeof zoomedImage === 'string' ? zoomedImage : zoomedImage.src;
+                            const newIndex = zoomedImage.globalIndex - 1;
+                            const prevPreview = project.imagePreview[newIndex];
+                            const prevHighRes = project.imageOverview && project.imageOverview[newIndex]
+                                ? project.imageOverview[newIndex]
+                                : prevPreview;
 
-                            const currentIndex = project.imagePreview.findIndex(img => img === currentImg);
+                            setZoomedImage({ ...zoomedImage, src: prevHighRes, globalIndex: newIndex });
 
-                            if (currentIndex > 0) {
-                                const prevImg = project.imagePreview[currentIndex - 1];
-
-                                setZoomedImage(typeof zoomedImage === 'string' ? prevImg : { ...zoomedImage, src: prevImg });
-
-                                const matchingSlideIndex = slides.findIndex(slide => slide.images && slide.images[0] === prevImg);
-                                if (matchingSlideIndex !== -1) {
-                                    setActiveSlide(matchingSlideIndex);
-                                }
-                            }
+                            const matchingSlideIndex = slides.findIndex(slide => slide.images && slide.images[0] === prevPreview);
+                            if (matchingSlideIndex !== -1) setActiveSlide(matchingSlideIndex);
                         }}
 
                         onNext={() => {
-                            if (!project || !project.imagePreview) return;
+                            if (!project || !project.imagePreview || zoomedImage.globalIndex === undefined) return;
+                            if (zoomedImage.globalIndex >= project.imagePreview.length - 1) return;
 
-                            const currentImg = typeof zoomedImage === 'string' ? zoomedImage : zoomedImage.src;
-                            const currentIndex = project.imagePreview.findIndex(img => img === currentImg);
+                            const newIndex = zoomedImage.globalIndex + 1;
+                            const nextPreview = project.imagePreview[newIndex];
+                            const nextHighRes = project.imageOverview && project.imageOverview[newIndex]
+                                ? project.imageOverview[newIndex]
+                                : nextPreview;
 
-                            if (currentIndex !== -1 && currentIndex < project.imagePreview.length - 1) {
-                                const nextImg = project.imagePreview[currentIndex + 1];
+                            setZoomedImage({ ...zoomedImage, src: nextHighRes, globalIndex: newIndex });
 
-                                setZoomedImage(typeof zoomedImage === 'string' ? nextImg : { ...zoomedImage, src: nextImg });
-
-                                const matchingSlideIndex = slides.findIndex(slide => slide.images && slide.images[0] === nextImg);
-                                if (matchingSlideIndex !== -1) {
-                                    setActiveSlide(matchingSlideIndex);
-                                }
-                            }
+                            const matchingSlideIndex = slides.findIndex(slide => slide.images && slide.images[0] === nextPreview);
+                            if (matchingSlideIndex !== -1) setActiveSlide(matchingSlideIndex);
                         }}
                     />
                 )}
