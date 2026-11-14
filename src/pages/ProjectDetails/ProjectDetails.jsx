@@ -156,14 +156,14 @@ const ProjectDetails = () => {
                         onClose={() => setZoomedImage(null)}
 
                         onPrev={() => {
-                            if (!project || !project.imageDetails) return;
+                            if (!project || !project.imagePreview) return;
 
                             const currentImg = typeof zoomedImage === 'string' ? zoomedImage : zoomedImage.src;
 
-                            const currentIndex = project.imageDetails.findIndex(img => img === currentImg);
+                            const currentIndex = project.imagePreview.findIndex(img => img === currentImg);
 
                             if (currentIndex > 0) {
-                                const prevImg = project.imageDetails[currentIndex - 1];
+                                const prevImg = project.imagePreview[currentIndex - 1];
 
                                 setZoomedImage(typeof zoomedImage === 'string' ? prevImg : { ...zoomedImage, src: prevImg });
 
@@ -175,13 +175,13 @@ const ProjectDetails = () => {
                         }}
 
                         onNext={() => {
-                            if (!project || !project.imageDetails) return;
+                            if (!project || !project.imagePreview) return;
 
                             const currentImg = typeof zoomedImage === 'string' ? zoomedImage : zoomedImage.src;
-                            const currentIndex = project.imageDetails.findIndex(img => img === currentImg);
+                            const currentIndex = project.imagePreview.findIndex(img => img === currentImg);
 
-                            if (currentIndex !== -1 && currentIndex < project.imageDetails.length - 1) {
-                                const nextImg = project.imageDetails[currentIndex + 1];
+                            if (currentIndex !== -1 && currentIndex < project.imagePreview.length - 1) {
+                                const nextImg = project.imagePreview[currentIndex + 1];
 
                                 setZoomedImage(typeof zoomedImage === 'string' ? nextImg : { ...zoomedImage, src: nextImg });
 

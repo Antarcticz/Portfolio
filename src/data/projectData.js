@@ -1,18 +1,22 @@
-import figma_Vanner_Showcase from '../assets/images/figma/Vanner/Vanner.svg';
-
-import figma_FoodApp_Showcase from '../assets/images/figma/Food_App/Food_app.svg';
-
-import figma_DevBnB_Showcase from '../assets/images/figma/DevBnB/DevBnB.svg';
-
 import figma_Volontarpoolen_Showcase from '../assets/images/figma/Volontarpoolen/Volontarpoolen.svg';
 
-import figma_Organaise_Showcase from '../assets/images/figma/OrganAise/Organaise_Showcase.svg';
-import figma_Organaise_Quick_Event_Doc from '../assets/images/figma/OrganAise/Organaise_Quick_Event_Doc.png';
-import figma_Organaise_Task_Board from '../assets/images/figma/OrganAise/Organaise_Task_Board.png';
-import figma_Organaise_Calendar_Shell from '../assets/images/figma/OrganAise/Organaise_Calendar_Shell.png';
-import figma_Organaise_Calendar_Views from '../assets/images/figma/OrganAise/Organaise_Calendar_Views.png';
-import figma_Organaise_Bookings from '../assets/images/figma/OrganAise/Organaise_Bookings.png';
-import figma_Organaise_Event_Poll from '../assets/images/figma/OrganAise/Organaise_Event_Poll.png';
+
+import figma_Organaise_Showcase from '../assets/images/figma/OrganAise/Showcase/Organaise_Showcase.svg';
+
+import figma_Organaise_Overview_Bookings from '../assets/images/figma/OrganAise/Overview/Overview_Bookings.png';
+import figma_Organaise_Overview_Calendar from '../assets/images/figma/OrganAise/Overview/Overview_Calendar.png';
+import figma_Organaise_Overview_Design_System from '../assets/images/figma/OrganAise/Overview/Overview_Design_System.png';
+import figma_Organaise_Overview_Documentation from '../assets/images/figma/OrganAise/Overview/Overview_Documentation.png';
+import figma_Organaise_Overview_Event_Poll from '../assets/images/figma/OrganAise/Overview/Overview_Event_Poll.png';
+import figma_Organaise_Overview_Task_Board from '../assets/images/figma/OrganAise/Overview/Overview_Task_Board.png';
+
+import figma_Organaise_Preview_Bookings from '../assets/images/figma/OrganAise/Preview/Preview_Bookings.png';
+import figma_Organaise_Preview_Calendar from '../assets/images/figma/OrganAise/Preview/Preview_Calendar.png';
+import figma_Organaise_Preview_Design_System from '../assets/images/figma/OrganAise/Preview/Preview_Design_System.png';
+import figma_Organaise_Preview_Documentation from '../assets/images/figma/OrganAise/Preview/Preview_Documentation.png';
+import figma_Organaise_Preview_Event_Poll from '../assets/images/figma/OrganAise/Preview/Preview_Event_Poll.png';
+import figma_Organaise_Preview_Task_Board from '../assets/images/figma/OrganAise/Preview/Preview_Task_Board.png';
+
 
 import figma_NEU_Showcase from '../assets/images/figma/NEU/NEU_Showcase.svg';
 import figma_NEU_Start from '../assets/images/figma/NEU/NEU_Start.svg';
@@ -20,14 +24,18 @@ import figma_NEU_Profile from '../assets/images/figma/NEU/NEU_Profile.svg';
 import figma_NEU_AI from '../assets/images/figma/NEU/NEU_AI.svg';
 import figma_NEU_Mood_Track from '../assets/images/figma/NEU/NEU_Mood_Track.svg';
 
+
 import frontend_MUI_Showcase from '../assets/images/frontend/MUI/MUI_Showcase.svg';
 import frontend_MUI_Login from '../assets/images/frontend/MUI/MUI_Login.svg';
 import frontend_MUI_Register from '../assets/images/frontend/MUI/MUI_Register.svg';
 import frontend_MUI_Pages from '../assets/images/frontend/MUI/MUI_Pages.svg';
 
+
 import frontend_Todo_List_Showcase from '../assets/images/frontend/Todo_List/Todo_List_Showcase.svg';
 
+
 import frontend_Solenia_Showcase from '../assets/images/frontend/Solenia/Solenia_Showcase.svg';
+
 
 import Epilepsy_Warning from '../assets/images/misc/Epilepsy_Warning.svg';
 import bob from '../assets/images/misc/bob.svg';
@@ -44,7 +52,8 @@ export const projectData = [
         duration: null,
         tools: null,
         imageShowcase: figma_Organaise_Showcase,
-        imageDetails: [figma_Organaise_Quick_Event_Doc, figma_Organaise_Task_Board, figma_Organaise_Calendar_Shell, figma_Organaise_Calendar_Views, figma_Organaise_Bookings, figma_Organaise_Event_Poll],
+        imagePreview: [figma_Organaise_Preview_Bookings, figma_Organaise_Preview_Calendar, figma_Organaise_Preview_Design_System, figma_Organaise_Preview_Documentation, figma_Organaise_Preview_Event_Poll, figma_Organaise_Preview_Task_Board],
+        imageOverview: [figma_Organaise_Overview_Bookings, figma_Organaise_Overview_Calendar, figma_Organaise_Overview_Design_System, figma_Organaise_Overview_Documentation, figma_Organaise_Overview_Event_Poll, figma_Organaise_Overview_Task_Board],
         link: 'https://www.figma.com/proto/yYdzTYlrWGMftGaBSalEGl/OrganAise--Copy-?node-id=8550-171593&starting-point-node-id=8550%3A171593&t=UQftWwTnIdHJ66Qg-1',
         overview: `OrganAise is a scheduling platform designed for busy professionals who balance multiple projects, clients, and business responsibilities. The goal of the project was to rethink the scheduling experience so that users can move from intent to a confirmed meeting in as few steps as possible, without losing control of their time.\n\nDuring my internship from November 2025 to April 2026, I served as the Design Lead and Team Leader. I managed a team of four, acting as the primary bridge between the design team, the developers, and the CEO. My focus was not only on shaping the core user experience but also on establishing a rigorous agile workflow, building a scalable Design System, and creating code-close documentation to ensure a seamless developer handoff.`,
         problem: `The biggest challenges on this project were rooted in strict business constraints and the need to align cross-functional workflows.\n\nThe "Mission Impossible" Design Constraints: The CEO and CPO handed us a challenging task: we were required to keep every single existing function visible, but we were strictly forbidden from using scrolling or pop-up modals. Finding a way to make the interface feel spacious and focused on active tasks while adhering to these limitations was incredibly difficult. I often had to personally pitch and advocate for my design solutions to the CEO and CPO to ensure they met both business requirements and user needs.\n\nWorkflow Alignment: With a team of four designers working alongside developers and stakeholders, we lacked a unified workflow. The challenge was finding a middle ground that allowed for individual focus while maintaining strict alignment with the CPO's priorities and the development team's technical constraints.`,
@@ -66,7 +75,8 @@ export const projectData = [
         duration: null,
         tools: null,
         imageShowcase: figma_Volontarpoolen_Showcase,
-        imageDetails: null,
+        imagePreview: null,
+        imageOverview: null,
         link: 'https://www.figma.com/proto/BOH4nvtKdnXn2lqB5Fd0uK/Qubic-Agency---LLUH-Voloon%C3%A4rbyron?node-id=1740-15702&starting-point-node-id=1740%3A15702&content-scaling=responsive&t=hWHUHpJhlFkDueGa-1',
         overview: `Description coming soon`,
         problem: `Description coming soon`,
@@ -88,7 +98,8 @@ export const projectData = [
         duration: null,
         tools: null,
         imageShowcase: figma_NEU_Showcase,
-        imageDetails: [figma_NEU_Start, figma_NEU_AI, figma_NEU_Profile, figma_NEU_Mood_Track],
+        imagePreview: [figma_NEU_Start, figma_NEU_AI, figma_NEU_Profile, figma_NEU_Mood_Track],
+        imageOverview: null,
         link: 'https://www.figma.com/proto/OnP8ryycodwf2s0Ran2P8g/NEU-DESIGNFILE?node-id=1963-10055&starting-point-node-id=1963%3A10055&t=aO2hbglKwvITeuo6-1',
         overview: `Description coming soon`,
         problem: null,
@@ -110,7 +121,8 @@ export const projectData = [
         duration: null,
         tools: null,
         imageShowcase: frontend_Todo_List_Showcase,
-        imageDetails: [frontend_Todo_List_Showcase, frontend_Todo_List_Showcase, frontend_Todo_List_Showcase, frontend_Todo_List_Showcase,],
+        imagePreview: [frontend_Todo_List_Showcase, frontend_Todo_List_Showcase, frontend_Todo_List_Showcase, frontend_Todo_List_Showcase,],
+        imageOverview: null,
         link: 'https://todo-list.maximilian-hedman.workers.dev/',
         overview: `The Todo App is a simple yet powerful task management tool designed to help you organize, track, and complete your tasks efficiently. Whether you're managing daily chores, work assignments, or personal projects, this app ensures you stay productive and never forget an important task again.`,
         problem: null,
@@ -132,7 +144,8 @@ export const projectData = [
         duration: null,
         tools: null,
         imageShowcase: frontend_Solenia_Showcase,
-        imageDetails: null,
+        imagePreview: null,
+        imageOverview: null,
         link: 'https://solenia.maximilian-hedman.workers.dev/',
         overview: `Description coming soon`,
         problem: `Description coming soon`,
@@ -154,7 +167,8 @@ export const projectData = [
         duration: `2 weeks`,
         tools: [`React Native`, `Expo`, `Firebase`],
         imageShowcase: frontend_MUI_Showcase,
-        imageDetails: [frontend_MUI_Login, frontend_MUI_Register, frontend_MUI_Pages],
+        imagePreview: [frontend_MUI_Login, frontend_MUI_Register, frontend_MUI_Pages],
+        imageOverview: null,
         link: 'https://mission-usage-impossible.netlify.app/',
         overview: `Mission: Usage Impossible was a collaborative school project where we explored the boundaries of UX by intentionally breaking every rule.\n\nWorking alongside my classmate Desirée, who spearheaded the UI design and retro-inspired mini-games, I was responsible for the technical infrastructure, backend logic, and Firebase Authentication.\n\nOur goal was to create a fully functional app that is simultaneously a nightmare to use.\n\nThe project features a deliberately confusing onboarding flow, a landing page, user profiles, and a dedicated "irritation page" filled with unpredictable interactive elements.`,
         design: `While the UI was designed to be chaotic-featuring moving buttons, inconsistent contrasts, and Windows 95-inspired frustration. I focused on ensuring the underlying architecture was clean and modular.\n\nI implemented Firebase Authentication to handle user sessions amidst the chaos. A key challenge was supporting the "frustrating" logic (like unpredictable interactions) with stable code.\n\nWhile Desirée integrated playful elements like Snake and Flappy Bird clones, I ensured that despite the poor user experience, the app remained technically robust and fully functional.`,
@@ -164,93 +178,5 @@ export const projectData = [
         outcome: null,
         imageWarning: Epilepsy_Warning,
         workInProgress: null,
-    },
-    {
-        id: 7,
-        isVisible: false,
-        title: 'VÄNNER App',
-        subtitle: null,
-        tagShowcase: 'Figma',
-        tag: 'Visual Identity',
-        role: null,
-        duration: null,
-        tools: null,
-        imageShowcase: figma_Vanner_Showcase,
-        imageDetails: null,
-        link: 'https://www.figma.com/design/Ql9U2CxELqaTBtVrBhOkn4/V%C3%84NNER?node-id=793-5315&t=lXZwuEP3nbLxBmQV-1',
-        overview: null,
-        problem: null,
-        research: null,
-        design: null,
-        outcome: null,
-        reflection: null,
-        imageWarning: null,
-        workInProgress: bob,
-    },
-    {
-        id: 8,
-        isVisible: false,
-        title: 'Music Festival',
-        subtitle: null,
-        tagShowcase: 'Frontend',
-        tag: 'API Integration',
-        role: null,
-        duration: null,
-        tools: null,
-        imageShowcase: null,
-        imageDetails: null,
-        link: null,
-        overview: null,
-        problem: null,
-        research: null,
-        design: null,
-        outcome: null,
-        reflection: null,
-        imageWarning: null,
-        workInProgress: bob,
-    },
-    {
-        id: 9,
-        isVisible: false,
-        title: 'Food App',
-        subtitle: null,
-        tagShowcase: 'Figma',
-        tag: 'Figma',
-        role: null,
-        duration: null,
-        tools: null,
-        imageShowcase: figma_FoodApp_Showcase,
-        imageDetails: null,
-        link: 'https://www.figma.com/design/lPkoTKAivjPEvwXcDFtlTn/Food-app?t=tUORXdu73FpuWzSl-1',
-        overview: null,
-        problem: null,
-        research: null,
-        design: null,
-        outcome: null,
-        reflection: null,
-        imageWarning: null,
-        workInProgress: bob,
-    },
-    {
-        id: 10,
-        isVisible: false,
-        title: 'DevBnB Website',
-        subtitle: 'test',
-        tagShowcase: 'Fullstack',
-        tag: 'Frontend + Backend',
-        role: 'Code Master',
-        duration: '2 weeks',
-        tools: [`React Native`, `Typescript`, `Firebase`],
-        imageShowcase: figma_DevBnB_Showcase,
-        imageDetails: null,
-        link: 'https://www.figma.com/design/sQMMYLChY0uwOk49JafqaZ/Frontend-Project-DevBnB?node-id=0-1&t=tUORXdu73FpuWzSl-1',
-        overview: null,
-        problem: null,
-        research: null,
-        design: null,
-        outcome: null,
-        reflection: null,
-        imageWarning: null,
-        workInProgress: bob,
     },
 ];

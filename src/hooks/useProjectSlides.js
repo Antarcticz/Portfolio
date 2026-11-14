@@ -22,8 +22,8 @@ const useProjectSlides = (project) => {
         const activeSlides = rawSlides.filter(slide => slide.content);
 
         return activeSlides.map((slide, index) => {
-            const imageForSlide = project.imageDetails && project.imageDetails[index]
-                ? [project.imageDetails[index]]
+            const imageForSlide = project.imagePreview && project.imagePreview[index]
+                ? [project.imagePreview[index]]
                 : [];
 
             return {
