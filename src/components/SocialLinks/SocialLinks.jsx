@@ -8,7 +8,7 @@ const SocialLinks = () => {
             <ul>
                 <li>
                     <a
-                        href="https://www.linkedin.com/in/maximilian-hedman-b10a2915b/"
+                        href="https://www.linkedin.com/in/maximilian-hedman/"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="LinkedIn (opens in new tab)"
@@ -18,7 +18,7 @@ const SocialLinks = () => {
                 </li>
                 <li>
                     <a
-                        href="https://github.com/MaximilianHedman"
+                        href="https://github.com/Antarcticz"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="GitHub (opens in new tab)"
