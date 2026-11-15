@@ -8,26 +8,17 @@ const useProjectSlides = (project) => {
     const containerRef = useRef(null);
 
     const slides = useMemo(() => {
-        if (!project) return [];
+        if (!project || !project.slideContent) return [];
 
-        const rawSlides = [
-            { id: 'overview', title: 'Overview', content: project.overview },
-            { id: 'problem', title: 'Problem', content: project.problem },
-            { id: 'research', title: 'Research', content: project.research },
-            { id: 'design', title: 'Process & Design', content: project.design },
-            { id: 'outcome', title: 'Outcome', content: project.outcome },
-            { id: 'reflection', title: 'Reflection', content: project.reflection }
-        ];
-
-        const activeSlides = rawSlides.filter(slide => slide.content);
-
-        return activeSlides.map((slide, index) => {
+        return project.slideContent.map((slide, index) => {
             const imageForSlide = project.imagePreview && project.imagePreview[index]
                 ? [project.imagePreview[index]]
                 : [];
 
             return {
-                ...slide,
+                id: `slide-${index}`,
+                title: slide.title,
+                content: slide.text,
                 images: imageForSlide
             };
         });
