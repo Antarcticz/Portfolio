@@ -231,7 +231,7 @@ export const projectData = [
             },
             {
                 title: `Debugging & Team Enablement`,
-                text: `To support the team without overriding their active work, I maintained local branches to test code solutions and catch bugs early.\n\nWhen the teammate building the shopping cart ran into a tricky state management issue, we collaborated to debug it. I provided my local implementation as a reference, allowing her to compare approaches, debug her own logic, and successfully get the cart working.\n\nThis workflow kept our momentum fast while prioritizing team learning.`,
+                text: `To support the team without overriding active work, I maintained local branches to test code solutions and catch bugs early.\n\nWhen the teammate building the shopping cart ran into a tricky state management issue, we collaborated to debug it. I provided my local implementation as a reference, making it easy to compare approaches, debug the logic, and successfully get the cart working.\n\nThis workflow kept our momentum fast while prioritizing team learning.`,
             }
         ],
         imageWarning: null,
