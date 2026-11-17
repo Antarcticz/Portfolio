@@ -207,35 +207,31 @@ export const projectData = [
         tag: 'Team',
         role: `Code Master`,
         duration: `3 weeks`,
-        tools: [`React`, `JavaScript`, `HTML`, `CSS`, `Github`, `API`, `Figma`],
+        tools: [`React`, `JavaScript`, `HTML`, `CSS`, `API`, `Github`, `Figma`],
         imageShowcase: frontend_Solenia_Showcase,
         imagePreview: null,
         imageOverview: null,
         link: 'https://solenia.maximilian-hedman.workers.dev/',
         slideContent: [
             {
-                title: `Overview`,
-                text: `Text coming soon`,
+                title: `Overview & The Code Master Role`,
+                text: `Solenia is a fully functional e-commerce web application built with React and Vite. In our team of five, I took on the role of Lead Developer (or "Code Master").\n\nWhile my teammates focused on Figma and UI design, my sole responsibility was architecting the React codebase, managing the Git repository, and building the core functionality to ensure we hit every high-grade technical requirement.`,
             },
             {
-                title: `Problem`,
-                text: `Text coming soon`,
+                title: `Architecture & Version Control`,
+                text: `A chaotic codebase slows everyone down. I started by designing a logical folder and file structure so the team could easily split up tasks without stepping on each others toes.\n\nOn GitHub, I acted as the gatekeeper for the main branch. I reviewed all pull requests, enforced best practices (like strict arrow functions and component modularity), left constructive feedback for my peers, and resolved all merge conflicts to keep our production code perfectly stable.`,
             },
             {
-                title: `Research`,
-                text: `Text coming soon`,
+                title: `API Integration & Data Merging`,
+                text: `The core of the app relied on fetching data from a third-party API. When the teammate building the Product Details page realized the API lacked specific details we wanted to display, I stepped in to help architect a solution.\n\nI engineered a hybrid concept on a local branch: a static database combined with a merge function. Instead of just doing it for them, I walked my teammate through the logic so they could understand the architecture and confidently implement it themselves.`,
             },
             {
-                title: `Design & process`,
-                text: `Text coming soon`,
+                title: `Advanced State Management`,
+                text: `To secure the highest possible grade (VG), the application needed advanced functionality like category filtering and a Favorites system. I focused on structuring the complex state logic for these features.\n\nHowever, as Code Master, my goal wasn't to write every line of code myself, but to empower the team. I built the foundational logic and collaborated with my teammates to integrate it, ensuring everyone learned the concepts and contributed meaningfully to the final product.`,
             },
             {
-                title: `Outcome`,
-                text: `Text coming soon`,
-            },
-            {
-                title: `Reflection`,
-                text: `Text coming soon`,
+                title: `Debugging & Team Enablement`,
+                text: `To support the team without overriding their active work, I maintained local branches to test code solutions and catch bugs early.\n\nWhen the teammate building the shopping cart ran into a tricky state management issue, we collaborated to debug it. I provided my local implementation as a reference, allowing her to compare approaches, debug her own logic, and successfully get the cart working.\n\nThis workflow kept our momentum fast while prioritizing team learning.`,
             }
         ],
         imageWarning: null,
