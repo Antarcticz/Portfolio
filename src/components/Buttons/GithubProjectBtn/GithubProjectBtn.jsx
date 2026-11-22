@@ -16,7 +16,7 @@ const GithubProjectBtn = () => {
             className="github-project-btn"
             aria-label="View source code on GitHub (opens in a new tab)"
         >
-            <span className="bold">View on GitHub</span>
+            <span className="bold">GitHub</span>
             <FontAwesomeIcon icon={['fab', 'github']} aria-hidden="true" />
         </a>
     );
