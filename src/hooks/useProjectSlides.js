@@ -59,6 +59,18 @@ const useProjectSlides = (project) => {
             setTimeout(() => { isScrolling.current = false; }, 100);
         };
 
+        const handleKeyDown = (e) => {
+            if (window.innerWidth < 768) return;
+
+            if (e.key === 'ArrowDown' || e.key === 'PageDown') {
+                e.preventDefault();
+                handleNext();
+            } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+                e.preventDefault();
+                handlePrev();
+            }
+        };
+
         const handleTouchStart = (e) => {
             touchStartX.current = e.touches[0].clientX;
             touchStartY.current = e.touches[0].clientY;
@@ -91,12 +103,14 @@ const useProjectSlides = (project) => {
         container.addEventListener('touchstart', handleTouchStart, { passive: true });
         container.addEventListener('touchmove', handleTouchMove, { passive: false });
         container.addEventListener('touchend', handleTouchEnd, { passive: true });
+        window.addEventListener('keydown', handleKeyDown);
 
         return () => {
             container.removeEventListener('wheel', handleWheel);
             container.removeEventListener('touchstart', handleTouchStart);
             container.removeEventListener('touchmove', handleTouchMove);
             container.removeEventListener('touchend', handleTouchEnd);
+            window.removeEventListener('keydown', handleKeyDown);
         };
     }, [handleNext, handlePrev]);
 
