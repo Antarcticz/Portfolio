@@ -45,6 +45,26 @@
             }
         }
 
+        .metadata-row {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            @media (min-width: 768px) {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-end;
+            }
+
+            .github-btn-desktop {
+                display: none;
+
+                @media (min-width: 768px) {
+                    display: flex;
+                }
+            }
+        }
+
         .metadata-grid {
             display: flex;
             flex-wrap: wrap;
@@ -59,7 +79,6 @@
             .meta-item {
                 h3 {
                     font-size: 0.75rem;
-
                     text-transform: uppercase;
                     color: #7b88ff;
                     padding-bottom: 0.25rem;
@@ -117,10 +136,30 @@
     .slide-navigation {
         display: flex;
         flex-direction: row;
-        gap: 0.5rem;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
 
         @media (min-width: 768px) {
-            flex-direction: column;
+            width: auto;
+        }
+
+        .dots-group {
+            display: flex;
+            flex-direction: row;
+            gap: 0.5rem;
+
+            @media (min-width: 768px) {
+                flex-direction: column;
+            }
+        }
+
+        .github-btn-mobile {
+            display: flex;
+
+            @media (min-width: 768px) {
+                display: none;
+            }
         }
 
         .dot {
@@ -128,7 +167,6 @@
             height: 1.5rem;
             padding: 0.4375rem;
             background-color: $theme-on-surface;
-            ;
             background-clip: content-box;
             border: none;
             border-radius: 50%;
@@ -200,7 +238,7 @@
                     max-height: 100%;
                     object-fit: fill;
                     padding: 1rem;
-                    
+
 
 
                     @media (min-width: 768px) {

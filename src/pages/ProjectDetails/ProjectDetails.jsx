@@ -8,6 +8,7 @@ import useProjectSlides from '../../hooks/useProjectSlides';
 
 import BackToProjectsBtn from '../../components/Buttons/BackToProjectsBtn/BackToProjectsBtn';
 import ProjectSourceBtn from '../../components/Buttons/ProjectSourceBtn/ProjectSourceBtn';
+import GithubProjectBtn from '../../components/Buttons/GithubProjectBtn/GithubProjectBtn';
 
 import WarningModal from '../../components/Modals/WarningModal/WarningModal';
 import ImageZoomModal from '../../components/Modals/ImageZoomModal/ImageZoomModal';
@@ -57,42 +58,54 @@ const ProjectDetails = () => {
             <div className="slider-interceptor-area">
                 <header className="details-header">
                     <h1>{project.title}</h1>
-                    <div className="metadata-grid">
-                        {project.role && (
-                            <div className="meta-item">
-                                <h3>Role</h3>
-                                <p>{project.role}</p>
-                            </div>
-                        )}
-                        {project.duration && (
-                            <div className="meta-item">
-                                <h3>Duration</h3>
-                                <p>{project.duration}</p>
-                            </div>
-                        )}
-                        {project.tools && (
-                            <div className="meta-item">
-                                <h3>Tools</h3>
-                                <div className="tools-list">
-                                    {project.tools.map((tool, index) => (
-                                        <span key={index} className="tool-tag">{tool}</span>
-                                    ))}
+                    <div className="metadata-row">
+                        <div className="metadata-grid">
+                            {project.role && (
+                                <div className="meta-item">
+                                    <h3>Role</h3>
+                                    <p>{project.role}</p>
                                 </div>
-                            </div>
-                        )}
+                            )}
+                            {project.duration && (
+                                <div className="meta-item">
+                                    <h3>Duration</h3>
+                                    <p>{project.duration}</p>
+                                </div>
+                            )}
+                            {project.tools && (
+                                <div className="meta-item">
+                                    <h3>Tools</h3>
+                                    <div className="tools-list">
+                                        {project.tools.map((tool, index) => (
+                                            <span key={index} className="tool-tag">{tool}</span>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+
+                        <div className="github-btn-desktop">
+                            <GithubProjectBtn />
+                        </div>
                     </div>
                 </header>
 
                 <section className="slides-layout-wrapper">
                     <div className="slide-navigation">
-                        {slides.map((_, index) => (
-                            <button
-                                key={index}
-                                className={`dot ${activeSlide === index ? 'active' : ''}`}
-                                onClick={() => setActiveSlide(index)}
-                                aria-label={`Go to slide ${index + 1}`}
-                            />
-                        ))}
+                        <div className="dots-group">
+                            {slides.map((_, index) => (
+                                <button
+                                    key={index}
+                                    className={`dot ${activeSlide === index ? 'active' : ''}`}
+                                    onClick={() => setActiveSlide(index)}
+                                    aria-label={`Go to slide ${index + 1}`}
+                                />
+                            ))}
+                        </div>
+
+                        <div className="github-btn-mobile">
+                            <GithubProjectBtn />
+                        </div>
                     </div>
 
                     <div className="main-content-column">
