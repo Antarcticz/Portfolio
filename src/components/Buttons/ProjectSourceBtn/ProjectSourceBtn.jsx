@@ -7,16 +7,23 @@ const ProjectSourceBtn = ({ onClick }) => {
 
     if (!project?.link) return null;
 
+    const buttonLabels = {
+        Figma: 'Try Figma Prototype',
+        Frontend: 'Visit Live Site',
+    };
+
+    const buttonText = buttonLabels[project.tagShowcase] || 'View Project';
+
     return (
         <a
             href={project.link}
             target="_blank"
             rel="noreferrer"
             className="project-source-btn"
-            aria-label="View project source or prototype (opens in a new tab)"
+            aria-label={`${buttonText} (opens in a new tab)`}
             onClick={onClick}
         >
-            <span className="bold">View Project Source / Prototype</span>
+            <span className="bold">{buttonText}</span>
         </a>
     );
 };

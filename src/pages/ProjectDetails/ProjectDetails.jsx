@@ -56,7 +56,6 @@ const ProjectDetails = () => {
         <main className="details-container slide-mode">
             <div className="slider-interceptor-area">
                 <header className="details-header">
-                    {/* ... (keep your existing header code exactly the same) ... */}
                     <h1>{project.title}</h1>
                     <div className="metadata-grid">
                         {project.role && (
@@ -113,10 +112,8 @@ const ProjectDetails = () => {
                                     currentSlideData.images.map((img, idx) => {
                                         const altText = `${project.title} ${currentSlideData.title} visual ${idx + 1}`;
 
-                                        // 1. Find the global index of this specific preview image in the main array
                                         const globalImageIndex = project.imagePreview?.indexOf(img) ?? -1;
 
-                                        // 2. Safely grab the matching high-res overview image (fallback to preview if overview is missing)
                                         const highResImage = project.imageOverview && project.imageOverview[globalImageIndex]
                                             ? project.imageOverview[globalImageIndex]
                                             : img;
@@ -124,13 +121,13 @@ const ProjectDetails = () => {
                                         return (
                                             <img
                                                 key={idx}
-                                                src={img} // The slide still displays the lightweight preview
+                                                src={img}
                                                 alt={altText}
                                                 className="zoomable-image"
                                                 onClick={() => setZoomedImage({
-                                                    src: highResImage, // The modal opens the high-res overview
+                                                    src: highResImage,
                                                     alt: altText,
-                                                    globalIndex: globalImageIndex // Pass the index so prev/next works
+                                                    globalIndex: globalImageIndex
                                                 })}
                                             />
                                         )
@@ -141,7 +138,6 @@ const ProjectDetails = () => {
                             </div>
 
                             <div className="slide-text">
-                                {/* ... (keep your existing text code exactly the same) ... */}
                                 <h2>{currentSlideData?.title}</h2>
                                 {currentSlideData?.content?.split('\n').map((paragraph, index) => (
                                     paragraph.trim() !== '' && (
@@ -164,7 +160,6 @@ const ProjectDetails = () => {
                     warningImage={project?.imageWarning}
                 />
 
-                {/* 3. Update the Modal navigation logic to use the globalIndex and imageOverview */}
                 {zoomedImage && (
                     <ImageZoomModal
                         image={zoomedImage}

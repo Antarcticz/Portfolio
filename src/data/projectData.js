@@ -176,6 +176,7 @@ export const projectData = [
         imagePreview: [frontend_Todo_List_Showcase, frontend_Todo_List_Showcase, frontend_Todo_List_Showcase, frontend_Todo_List_Showcase,],
         imageOverview: null,
         link: 'https://todo-list.maximilian-hedman.workers.dev/',
+        githubLink: `https://github.com/Antarcticz/Todo-List`,
         overview: `The Todo App is a simple yet powerful task management tool designed to help you organize, track, and complete your tasks efficiently. Whether you're managing daily chores, work assignments, or personal projects, this app ensures you stay productive and never forget an important task again.`,
         slideContent: [
             {
@@ -212,6 +213,7 @@ export const projectData = [
         imagePreview: null,
         imageOverview: null,
         link: 'https://solenia.maximilian-hedman.workers.dev/',
+        githubLink: `https://github.com/Antarcticz/SOLENIA`,
         slideContent: [
             {
                 title: `Overview & The Code Master Role`,
@@ -251,6 +253,7 @@ export const projectData = [
         imagePreview: [frontend_MUI_Login, frontend_MUI_Register, frontend_MUI_Pages],
         imageOverview: null,
         link: 'https://mission-usage-impossible.netlify.app/',
+        githubLink: `https://github.com/desjohnsen/mission-usage-impossible`,
         slideContent: [
             {
                 title: `Overview`,
