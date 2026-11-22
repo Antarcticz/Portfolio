@@ -1,5 +1,6 @@
 import React from 'react';
 import useProject from '../../../hooks/useProject';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './ProjectSourceBtn.scss';
 
 const ProjectSourceBtn = ({ onClick }) => {
@@ -24,6 +25,7 @@ const ProjectSourceBtn = ({ onClick }) => {
             onClick={onClick}
         >
             <span className="bold">{buttonText}</span>
+            <FontAwesomeIcon icon={['fas', 'arrow-up-right-from-square']} aria-hidden="true" />
         </a>
     );
 };

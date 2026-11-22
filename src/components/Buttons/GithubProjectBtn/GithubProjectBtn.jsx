@@ -1,5 +1,6 @@
 import React from 'react';
 import useProject from '../../../hooks/useProject';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './GithubProjectBtn.scss';
 
 const GithubProjectBtn = () => {
@@ -16,6 +17,7 @@ const GithubProjectBtn = () => {
             aria-label="View source code on GitHub (opens in a new tab)"
         >
             <span className="bold">View on GitHub</span>
+            <FontAwesomeIcon icon={['fab', 'github']} aria-hidden="true" />
         </a>
     );
 };
