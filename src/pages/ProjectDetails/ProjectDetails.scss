@@ -212,9 +212,7 @@
                 justify-content: center;
                 width: 100%;
                 background-color: #bfbfbf;
-                // border: 1rem solid #7b88ff;
                 box-shadow: inset 0 0 16px 8px #00000050;
-
                 cursor: zoom-in;
 
                 @media (min-width: 768px) {
@@ -226,24 +224,88 @@
                     height: 600px;
                     border: none;
 
-
                     @media (min-width: 768px) {
                         height: 100%;
                         min-height: 650px;
                     }
                 }
 
-                img {
-                    max-width: 100%;
-                    max-height: 100%;
-                    object-fit: fill;
-                    padding: 1rem;
+                .zoomable-image-wrapper {
+                    display: grid;
+                    width: 100%;
+                    height: 100%;
 
+                    .zoomable-image,
+                    .zoom-icon-center,
+                    .zoom-icon-corner-slot {
+                        grid-area: 1 / 1;
+                    }
 
+                    .zoomable-image {
+                        max-width: 100%;
+                        max-height: 100%;
+                        object-fit: fill;
+                        padding: 1rem;
 
-                    @media (min-width: 768px) {
-                        width: 100%;
-                        height: 100%;
+                        @media (min-width: 768px) {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    .zoom-icon-center {
+                        place-self: center;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 4rem;
+                        height: 4rem;
+                        border-radius: 0.75rem;
+                        background-color: rgba(0, 0, 0, 0.5);
+                        color: #ffffff;
+                        pointer-events: none;
+                        opacity: 0;
+                        animation: zoomCenterSequence 1.8s ease-in-out 0.2s forwards;
+
+                        svg {
+                            width: 2.25rem;
+                            height: 2.25rem;
+                        }
+
+                        @media (prefers-reduced-motion: reduce) {
+                            animation: none;
+                            display: none;
+                        }
+                    }
+
+                    .zoom-icon-corner-slot {
+                        align-self: start;
+                        justify-self: end;
+                        padding: 1.75rem;
+                        pointer-events: none;
+                    }
+
+                    .zoom-icon-corner {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 2.25rem;
+                        height: 2.25rem;
+                        border-radius: 0.5rem;
+                        background-color: rgba(0, 0, 0, 0.5);
+                        color: #ffffff;
+                        opacity: 0;
+                        animation: zoomCornerFadeIn 0.5s ease-out 2s forwards;
+
+                        svg {
+                            width: 1.25rem;
+                            height: 1.25rem;
+                        }
+
+                        @media (prefers-reduced-motion: reduce) {
+                            animation: none;
+                            opacity: 1;
+                        }
                     }
                 }
             }
@@ -303,5 +365,37 @@
                 align-items: center;
             }
         }
+    }
+}
+
+@keyframes zoomCenterSequence {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    25% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    70% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+}
+
+@keyframes zoomCornerFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }

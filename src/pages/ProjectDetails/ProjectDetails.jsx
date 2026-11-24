@@ -132,18 +132,42 @@ const ProjectDetails = () => {
                                             : img;
 
                                         return (
-                                            <img
-                                                key={idx}
-                                                src={img}
-                                                alt={altText}
-                                                className="zoomable-image"
+                                            <div
+                                                key={`${activeSlide}-${idx}`}
+                                                className="zoomable-image-wrapper"
                                                 onClick={() => setZoomedImage({
                                                     src: highResImage,
                                                     alt: altText,
                                                     globalIndex: globalImageIndex
                                                 })}
-                                            />
-                                        )
+                                            >
+                                                <img
+                                                    src={img}
+                                                    alt={altText}
+                                                    className="zoomable-image"
+                                                />
+
+                                                <div className="zoom-icon-center" aria-hidden="true">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                        <circle cx="11" cy="11" r="8" />
+                                                        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                                                        <line x1="11" y1="8" x2="11" y2="14" />
+                                                        <line x1="8" y1="11" x2="14" y2="11" />
+                                                    </svg>
+                                                </div>
+
+                                                <div className="zoom-icon-corner-slot" aria-hidden="true">
+                                                    <div className="zoom-icon-corner">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                            <circle cx="11" cy="11" r="8" />
+                                                            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                                                            <line x1="11" y1="8" x2="11" y2="14" />
+                                                            <line x1="8" y1="11" x2="14" y2="11" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        );
                                     })
                                 ) : (
                                     <div className="placeholder">Visual assets coming soon</div>
