@@ -34,7 +34,16 @@ import frontend_MUI_Pages from '../assets/images/frontend/MUI/MUI_Pages.svg';
 import frontend_Todo_List_Showcase from '../assets/images/frontend/Todo_List/Todo_List_Showcase.svg';
 
 
-import frontend_Solenia_Showcase from '../assets/images/frontend/Solenia/Solenia_Showcase.svg';
+import frontend_Solenia_Showcase from '../assets/images/frontend/Solenia/Showcase/Solenia_Showcase.svg';
+
+import frontend_Solenia_Overview_File_Structure from '../assets/images/frontend/Solenia/Overview/Overview_File_Structure.png';
+import frontend_Solenia_Overview_Data_Merging from '../assets/images/frontend/Solenia/Overview/Overview_Data_Merging.png';
+
+import frontend_Solenia_Preview_Overview from '../assets/images/frontend/Solenia/Preview/Preview_Overview.png';
+import frontend_Solenia_Preview_File_Structure from '../assets/images/frontend/Solenia/Preview/Preview_File_Structure.png';
+import frontend_Solenia_Preview_Static_Database from '../assets/images/frontend/Solenia/Preview/Preview_Static_Database.png';
+import frontend_Solenia_Preview_Favorites from '../assets/images/frontend/Solenia/Preview/Preview_Favorites.png';
+import frontend_Solenia_Preview_Shopping_Cart from '../assets/images/frontend/Solenia/Preview/Preview_Shopping_Cart.png';
 
 
 import Epilepsy_Warning from '../assets/images/misc/Epilepsy_Warning.svg';
@@ -210,8 +219,8 @@ export const projectData = [
         duration: `3 weeks`,
         tools: [`React`, `JavaScript`, `HTML`, `CSS`, `API`, `Github`, `Figma`],
         imageShowcase: frontend_Solenia_Showcase,
-        imagePreview: null,
-        imageOverview: null,
+        imagePreview: [frontend_Solenia_Preview_Overview, frontend_Solenia_Preview_File_Structure, frontend_Solenia_Preview_Static_Database, frontend_Solenia_Preview_Favorites, frontend_Solenia_Preview_Shopping_Cart],
+        imageOverview: [null, frontend_Solenia_Overview_File_Structure, frontend_Solenia_Overview_Data_Merging, null, null],
         link: 'https://solenia.maximilian-hedman.workers.dev/',
         githubLink: `https://github.com/Antarcticz/SOLENIA`,
         slideContent: [
@@ -237,7 +246,7 @@ export const projectData = [
             }
         ],
         imageWarning: null,
-        workInProgress: bob,
+        workInProgress: null,
     },
     {
         id: 6,
