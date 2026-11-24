@@ -1,4 +1,4 @@
-# Portfolio v2
+# Portfolio
 
 A high-performance personal portfolio built with **React + Vite**, focusing on clean architecture, scalable state management, and a refined "soft-minimalist" user experience.
 
