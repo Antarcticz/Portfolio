@@ -135,8 +135,8 @@ const ProjectDetails = () => {
 
                                         return (
                                             <div
-                                                key={`${activeSlide}-${idx}`}
-                                                className="zoomable-image-wrapper"
+                                                key={`${project.title}-${idx}`}
+                                                className="preview-image-wrapper"
                                                 onClick={() => setZoomedImage({
                                                     src: highResImage,
                                                     alt: altText,
@@ -146,15 +146,15 @@ const ProjectDetails = () => {
                                                 <img
                                                     src={img}
                                                     alt={altText}
-                                                    className="zoomable-image"
+                                                    className="preview-image"
                                                 />
 
-                                                <div className="zoom-icon-center" aria-hidden="true">
+                                                <div className="expand-hint-center" aria-hidden="true">
                                                     <FontAwesomeIcon icon={['fas', 'up-right-and-down-left-from-center']} aria-hidden="true" />
                                                 </div>
 
-                                                <div className="zoom-icon-corner-slot" aria-hidden="true">
-                                                    <div className="zoom-icon-corner">
+                                                <div className="expand-badge-slot" aria-hidden="true">
+                                                    <div className="expand-badge">
                                                         <FontAwesomeIcon icon={['fas', 'up-right-and-down-left-from-center']} aria-hidden="true" />
                                                         <span>Full view</span>
                                                     </div>
